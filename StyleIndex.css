@@ -1,0 +1,147 @@
+
+        /* O body é o corpo da página, tudo que estiver aqui dentro vai aparecer na pagina */
+        body{
+
+            background-color: #242323; /* define o fundo da page com a cor cinza*/
+            color: white; /* coloca a cor do texto como branca */
+            margin: 0; /* tira as margens padrão do navegador*/
+            padding: 0; /* remove os espaçozinhos pré definidos pelo navegador*/
+            position: relative; /* garante que os elementos flutuantes fiquem presos ao body*/
+            font-family: 'Press Start 2P', cursive; /* Aplica fonte pixelada */
+
+        }
+
+
+        /*aplico elementos visuais sem a necessidade de escrever html,
+        o before(esquerda) serve para adicionar esse 
+        elemento antes de qualquer linha ou div do html */
+        body::before{
+            content: ""; /*cria um elemento sem a necessidade de texto, usando apenas css*/
+            position: absolute; /* faz com que o elemento seja posicionado livremente*/
+            top: 0; /*coloca no topo da tela*/
+            left: 260px; /* distancia do lado esquerdo da tela*/
+            width: 20px; /*largura da linha*/
+            height: 100vh; /*altura da linha (100vh ocupa os limites da tela)*/
+            background: linear-gradient(to bottom, #b6dddd,#0db1c7); /* fundo com gradiente, vai indo de uma cor até a outra e segue uma direção*/
+        }
+
+        img#LogoUsp{
+            position:absolute;
+            left:300px;
+            top: 860px;
+        }
+
+        div#Texto001{
+            position: absolute; /* Faz com que a posição seja em relação ao body */
+            top: 250px; /* Distância de 100px do topo */
+            left: 500px; /* Distância de 50px da esquerda */
+            font-size: 40px;
+            color: white; /* Cor do texto */
+        }
+
+        div#Texto002{
+            position: absolute; /* Faz com que a posição seja em relação ao body */
+            top: 320px; /* Distância de 100px do topo */
+            left: 505px; /* Distância de 50px da esquerda */
+            font-size: 10px; /* Tamanho da fonte*/ 
+            color: white; /* Cor do texto */
+            width: 100%; /* Garante que o parágrafo ocupe a largura total */
+            max-width: 600px; /* Limita a largura para não ficar muito largo */
+            margin: 0 auto; /* Centraliza o texto na página */
+            line-height: 1.6; /* Ajusta o espaçamento entre as linhas */
+            word-wrap: break-word; /* Garante que palavras longas se quebrem */
+            text-align: justify; /* Justifica o texto, criando linhas uniformes */
+            text-indent: 30px; /* Adiciona um espaço antes da primeira palavra */
+
+        }
+
+        div#TextoLateral{
+            position: absolute; /* Faz com que a posição seja em relação ao body */
+            top: 20px; /* Distância do topo */
+            left: 5px; /* Distância da esquerda */
+            font-size: 10px; /* Tamanho da fonte*/ 
+            color: white; /* Cor do texto */
+            width: 100%; /* Garante que o parágrafo ocupe a largura total */
+            max-width: 250px; /* Limita a largura para não ficar muito largo */
+            margin: 0 auto; /* Centraliza o texto na página */
+            line-height: 1.6; /* Ajusta o espaçamento entre as linhas */
+            word-wrap: break-word; /* Garante que palavras longas se quebrem */
+            text-align: justify; /* Justifica o texto, criando linhas uniformes */
+
+        }
+
+
+        div#CirculoFoto {
+            width: 150px; /* Define o tamanho do círculo (largura) */
+            height: 150px; /* Define o tamanho do círculo (altura) */
+            border-radius: 50%; /* Torna o div redondo, criando o efeito de círculo */
+            overflow: hidden; /* Garante que qualquer parte da imagem que ultrapasse os limites do círculo seja escondida */
+            display: flex; /* Habilita o layout flexível, permitindo o alinhamento dos elementos internos */
+            justify-content: center; /* Alinha a imagem no centro horizontalmente dentro do círculo */
+            align-items: center; /* Alinha a imagem no centro verticalmente dentro do círculo */
+            background-color: #ddd; /* Cor de fundo do círculo (aparece caso a imagem não ocupe todo o espaço) */
+            position: absolute;
+            left: 300px;
+            top: 10px;
+        }
+
+
+        div#CirculoFoto img {
+            width: 100%; /* Faz a imagem preencher toda a área do círculo */
+            height: 100%; /* Faz a imagem preencher toda a área do círculo */
+            object-fit: cover; /* Garante que a imagem se ajuste sem distorcer */
+        }
+
+
+        div#TextoProjetos{
+
+            position: absolute;
+            font-size: 25px;
+            left: 1300px;
+            top: 100px;
+
+        }
+
+        img#LinhaDourada{
+
+            transform: rotate(90deg); /* Rotaciona a imagem 45 graus no sentido horário */
+            left: 1250px;
+            top: 230px;
+            height: 300px;
+            position: absolute;
+
+        }
+
+
+        img#LinhaDourada2{
+
+            transform: rotate(270deg); /* Rotaciona a imagem 45 graus no sentido horário */
+            left: 950px;
+            top: 230px;
+            height: 300px;
+            position: absolute;
+
+        }
+
+        a#Botao01{
+            left: 1320px;
+            top: 250px;
+            position: absolute;
+        }
+
+
+        a#Botao02{
+            left: 1320px;
+            top: 350px;
+            position: absolute;
+        }
+
+
+        a#Botao03{
+            left: 1320px;
+            top: 450px;
+            position: absolute;
+        }
+
+
+
