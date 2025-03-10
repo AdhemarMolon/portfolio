@@ -22,20 +22,7 @@ body{
 
 /*Nessa parte vamos garantir que o site seja responsivo para diferentes tamanhos de tela*/
 
-/*O @media é uma regra CSS que permite criar estilos condicionais*/
-@media (max-width: 768px){
-    body{
-        padding: 10px; /*Distancia entre o conteudo de um elemento e suas bordas*/
-        font-size: 14px; /*Obviamente o tamanha da fonte*/
-    }
-}
 
-@media (max-width: 480px){
-    body{
-        padding: 5px;
-        font-size: 12px;
-    }
-}
 
 
 /*========= BARRA LATERAL ========= */
