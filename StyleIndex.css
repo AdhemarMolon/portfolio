@@ -28,6 +28,7 @@ body{
         padding: 10px; /*Distancia entre o conteudo de um elemento e suas bordas*/
         font-size: 14px; /*Obviamente o tamanha da fonte*/
     }
+    
 }
 
 @media (max-width: 480px){
@@ -41,7 +42,7 @@ body{
 /*========= BARRA LATERAL ========= */
 
 .BarraLateral {
-    width: 250px; /* Largura fixa da barra lateral */
+    width: 250px; /* Largura da barra lateral */
     background-color: #2c3e50; /* Cor de fundo azul escuro */
     color: white; /* Cor do texto */
     padding: 20px; /* Espaçamento interno */
@@ -79,7 +80,8 @@ body{
 
 .Redirecionamentos {
     display: flex; /* Usando flexbox para alinhar os itens horizontalmente */
-    gap: 400px; /* Espaçamento entre cada botão */
+    gap: 2vw; /* Espaçamento ajustado com base na largura da tela */
+
 }
 
 .botao {
