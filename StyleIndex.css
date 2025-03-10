@@ -1,125 +1,95 @@
 /*========= CORPO DO SITE ========= */
 
-/* Resetando as configurações do site, esse (*) é um seletor universal */
-* {
+
+/*resetando as config do site, esse (*) é um seletor universal*/
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+
 /* Toda a configuração geral e visual do site ficará aqui */
-body {
-    background-color: #2a2a2a; /* Define a cor de fundo do site */
-    font-family: 'Press Start 2P', cursive; /* Define a fonte */
-    color: #ffffff; /* Cor do texto */
-    margin: 0 auto; /* Centraliza o conteúdo na página */
-    line-height: 1.6; /* Espaço entre as linhas */
-    overflow-x: hidden; /* Impede rolagem horizontal no body */
+body{
+    background-color: #2a2a2a; /*Define a cor de fundo do site*/
+    font-family: 'Press Start 2P', cursive; /*Define a fonte*/
+    color: #ffffff; /*Cor do Texto*/
+    margin: 0 auto;/* Centraliza o conteúdo na página (0 para cima/baixo, auto para esquerda/direita) */
+    line-height: 1.6; /*Espaço entre as linhas*/
 }
 
-/* Configurações responsivas */
-@media (max-width: 768px) {
-    body {
-        padding: 10px; /* Distância entre o conteúdo e as bordas */
-    }
-    .Redirecionamentos {
-        gap: 15px; /* Reduz o espaçamento em tablets */
+
+/*Nessa parte vamos garantir que o site seja responsivo para diferentes tamanhos de tela*/
+
+/*O @media é uma regra CSS que permite criar estilos condicionais*/
+@media (max-width: 768px){
+    body{
+        padding: 10px; /*Distancia entre o conteudo de um elemento e suas bordas*/
+        font-size: 14px; /*Obviamente o tamanha da fonte*/
     }
 }
 
-@media (max-width: 480px) {
-    body {
-        padding: 5px; /* Menor padding em celulares */
-    }
-    .Redirecionamentos {
-        gap: 10px; /* Ainda menor em celulares */
-        flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+@media (max-width: 480px){
+    body{
+        padding: 5px;
+        font-size: 12px;
     }
 }
+
 
 /*========= BARRA LATERAL ========= */
 
 .BarraLateral {
-    width: 250px; /* Largura da barra lateral */
+    width: 250px; /* Largura fixa da barra lateral */
     background-color: #2c3e50; /* Cor de fundo azul escuro */
     color: white; /* Cor do texto */
     padding: 20px; /* Espaçamento interno */
     position: fixed; /* Fixa a barra lateral ao rolar a página */
     height: 100vh; /* Altura total da janela de visualização */
-    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
-    z-index: 1; /* Garante que a barra lateral fique abaixo da horizontal */
-}
+    overflow-y: auto; /* Adiciona rolagem vertical se o conteúdo for maior que a altura */
+  }
 
 .InformacoesPessoais {
-    text-align: center; /* Centraliza o conteúdo */
-    margin-bottom: 30px; /* Espaço abaixo */
-    padding-bottom: 20px; /* Espaço interno inferior */
-    border-bottom: 1px solid #444; /* Linha divisória */
+    text-align: center;          /* Centraliza todo o conteúdo dentro desta div */
+    margin-bottom: 30px;         /* Adiciona espaço de 30px abaixo deste elemento */
+    padding-bottom: 20px;        /* Adiciona espaço interno inferior de 20px */
+    border-bottom: 1px solid #444; /* Cria uma linha divisória cinza escuro na parte inferior */
 }
 
 .FotoDoPai img {
-    width: 100%; /* Ocupa 100% da largura do contêiner */
-    height: 100%; /* Ocupa 100% da altura do contêiner */
-    object-fit: cover; /* Redimensiona mantendo proporção */
-    object-position: center; /* Centraliza a imagem */
+    width: 100%;          /* Faz a imagem ocupar 100% da largura do contêiner */
+    height: 100%;         /* Faz a imagem ocupar 100% da altura do contêiner */
+    object-fit: cover;    /* Redimensiona a imagem mantendo a proporção e cobrindo toda a área */
+    object-position: center; /* Centraliza a imagem dentro do contêiner */
     border-radius: 50%;
-}
-
-@media (max-width: 768px) {
-    .BarraLateral {
-        width: 100px; /* Reduz a largura em telas menores */
-    }
-}
-
-@media (max-width: 480px) {
-    .BarraLateral {
-        width: 80px; /* Ainda menor em celulares */
-    }
 }
 
 /*========= BARRA HORIZONTAL ========= */
 
 .BarraHorizontal {
-    width: calc(100% - 250px); /* Ajusta a largura subtraindo a barra lateral */
+    width: 100%; /* Ocupa toda a largura da tela */
     height: 50px; /* Altura da barra */
     background-color: #47525e; /* Cor da barra */
     display: flex; /* Para alinhar elementos dentro dela */
-    align-items: center; /* Alinha verticalmente */
-    justify-content: center; /* Alinha horizontalmente */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
-    max-width: 100%; /* Não excede a largura da tela */
-    position: fixed; /* Fixa a barra no topo */
-    top: 0; /* Alinha ao topo */
-    left: 250px; /* Desloca para a direita da barra lateral */
-    z-index: 2; /* Fica acima da barra lateral */
+    align-items: center; /* Alinha o conteúdo verticalmente */
+    justify-content: center; /* Alinha o conteúdo horizontalmente */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
 }
 
 .Redirecionamentos {
-    display: flex; /* Flexbox para alinhar itens horizontalmente */
-    gap: 30px; /* Espaçamento inicial razoável */
-    justify-content: center; /* Centraliza os botões */
+    display: flex; /* Usando flexbox para alinhar os itens horizontalmente */
+    gap: 400px; /* Espaçamento entre cada botão */
 }
 
 .botao {
     color: white; /* Cor do texto */
-    text-decoration: none; /* Remove sublinhado */
-    border-radius: 5px; /* Bordas arredondadas */
-    background-color: #2c3e50; /* Cor de fundo */
-    padding: 5px 5px; /* Altura e largura do botão */
+    text-decoration: none; /* Remove qualquer sublinhado que o link possa ter por padrão */
+    border-radius: 5px; /* Bordas arredondadas no botão */
+    background-color: #2c3e50; /*Cor de fundo do botão*/
+    padding: 5px 5px; /*Altura e largura do background do botão*/
 }
 
-@media (max-width: 768px) {
-    .BarraHorizontal {
-        width: calc(100% - 100px); /* Ajusta a largura */
-        left: 100px; /* Ajusta o deslocamento */
-    }
-}
 
-@media (max-width: 480px) {
-    .BarraHorizontal {
-        width: calc(100% - 80px); /* Ajusta ainda mais */
-        left: 80px; /* Ajusta ainda mais */
-    }
-}
 
 /*========= IMAGENS DO SITE ========= */
