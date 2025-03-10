@@ -17,59 +17,25 @@ body{
     color: #ffffff; /*Cor do Texto*/
     margin: 0 auto;/* Centraliza o conteúdo na página (0 para cima/baixo, auto para esquerda/direita) */
     line-height: 1.6; /*Espaço entre as linhas*/
-    overflow-x: hidden; /* Impede que o conteúdo ultrapasse a largura da tela */
 }
 
 
 /*Nessa parte vamos garantir que o site seja responsivo para diferentes tamanhos de tela*/
 
 /*O @media é uma regra CSS que permite criar estilos condicionais*/
-/* Responsividade para dispositivos com largura máxima de 768px */
-@media (max-width: 768px) {
-    body {
-        padding: 10px; /* Distância entre o conteúdo e as bordas */
-        font-size: 14px; /* Tamanho da fonte */
-    }
-
-    .BarraLateral {
-        width: 100%; /* A barra lateral deve ocupar toda a largura da tela */
-        height: auto; /* Ajusta a altura da barra lateral */
-        position: static; /* Remove o "fixed" para não sobrepor o conteúdo */
-    }
-
-    .Redirecionamentos {
-        gap: 20px; /* Diminui o espaço entre os botões */
-        flex-wrap: wrap; /* Faz os botões se empilharem quando necessário */
-    }
-
-    .botao {
-        padding: 10px; /* Adiciona mais espaço nos botões */
+@media (max-width: 768px){
+    body{
+        padding: 10px; /*Distancia entre o conteudo de um elemento e suas bordas*/
+        font-size: 14px; /*Obviamente o tamanha da fonte*/
     }
 }
 
-/* Responsividade para dispositivos com largura máxima de 480px */
-@media (max-width: 480px) {
-    body {
-        padding: 5px; /* Distância menor entre o conteúdo e as bordas */
-        font-size: 12px; /* Tamanho da fonte maior para leitura */
-    }
-
-    .BarraLateral {
-        width: 100%; /* A barra lateral deve ocupar toda a largura da tela */
-        height: auto; /* Ajusta a altura da barra lateral */
-        position: static; /* Remove o "fixed" para não sobrepor o conteúdo */
-    }
-
-    .Redirecionamentos {
-        gap: 10px; /* Espaçamento menor entre os botões */
-        flex-wrap: wrap; /* Faz os botões se empilharem quando necessário */
-    }
-
-    .botao {
-        padding: 8px; /* Adiciona mais espaço nos botões */
+@media (max-width: 480px){
+    body{
+        padding: 5px;
+        font-size: 12px;
     }
 }
-
 
 
 /*========= BARRA LATERAL ========= */
