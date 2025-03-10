@@ -32,11 +32,18 @@ body{
     }
 
     .BarraLateral {
-        width: 200px; /* Largura da barra lateral */
+        width: 100%; /* A barra lateral deve ocupar toda a largura da tela */
+        height: auto; /* Ajusta a altura da barra lateral */
+        position: static; /* Remove o "fixed" para não sobrepor o conteúdo */
     }
 
     .Redirecionamentos {
         gap: 20px; /* Diminui o espaço entre os botões */
+        flex-wrap: wrap; /* Faz os botões se empilharem quando necessário */
+    }
+
+    .botao {
+        padding: 10px; /* Adiciona mais espaço nos botões */
     }
 }
 
@@ -44,15 +51,22 @@ body{
 @media (max-width: 480px) {
     body {
         padding: 5px; /* Distância menor entre o conteúdo e as bordas */
-        font-size: 14px; /* Tamanho da fonte maior para leitura */
+        font-size: 12px; /* Tamanho da fonte maior para leitura */
     }
 
     .BarraLateral {
-        width: 150px; /* Largura da barra lateral */
+        width: 100%; /* A barra lateral deve ocupar toda a largura da tela */
+        height: auto; /* Ajusta a altura da barra lateral */
+        position: static; /* Remove o "fixed" para não sobrepor o conteúdo */
     }
 
     .Redirecionamentos {
-        gap: 10px; /* Espaçamento ainda menor entre os botões */
+        gap: 10px; /* Espaçamento menor entre os botões */
+        flex-wrap: wrap; /* Faz os botões se empilharem quando necessário */
+    }
+
+    .botao {
+        padding: 8px; /* Adiciona mais espaço nos botões */
     }
 }
 
