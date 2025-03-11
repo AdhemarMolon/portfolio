@@ -130,14 +130,14 @@ div#linha2 {
 /*========= TEXTO BARRA LATERAL ========= */
 
 .Hiperlinks, #Curriculo, #Projetos,#Hackathon{
-    margin-top:10%;
+    margin-top:10%; /*Distancia entre os hyperlinks*/
 }
 
 a#Curriculo, a#Projetos, a#Hackathon {
     display: block; /* Faz os links se comportarem como divs */
-    background-color: rgb(255, 255, 255);
-    color: #2a2a2a;
-    border-radius: 5px;
+    background-color: rgb(255, 255, 255); /*cria uma cor de fundo para o texto de define sua cor*/
+    color: #2a2a2a; /* define a cor do texto*/
+    border-radius: 5px; /* Arredonda as pontas*/
     text-decoration: none; /* Remove o sublinhado dos links */
     padding: 10px; /* Adiciona um espaçamento interno */
 }
