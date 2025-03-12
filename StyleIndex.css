@@ -17,24 +17,23 @@ body{
     color: #ffffff; /*Cor do Texto*/
     margin: 0 auto;/* Centraliza o conteúdo na página (0 para cima/baixo, auto para esquerda/direita) */
     line-height: 1.6; /*Espaço entre as linhas*/
-    width: 1920px; /* Define uma largura fixa */
-    height: 1080px; /* Define uma altura fixa */
-    overflow: auto; /* Permite rolagem se a tela for menor */
 }
 
 
 /*Nessa parte vamos garantir que o site seja responsivo para diferentes tamanhos de tela*/
 
 /*O @media é uma regra CSS que permite criar estilos condicionais*/
-@media (max-width: 1920px){
+@media (max-width: 768px){
     body{
-        overflow-x: auto; /* Permite rolagem horizontal se a tela for menor que 1920px */
+        padding: 10px; /*Distancia entre o conteudo de um elemento e suas bordas*/
+        font-size: 14px; /*Obviamente o tamanha da fonte*/
     }
 }
 
-@media (max-height: 1080px){
+@media (max-width: 480px){
     body{
-        overflow-y: auto; /* Permite rolagem vertical se a tela for menor que 1080px */
+        padding: 5px;
+        font-size: 12px;
     }
 }
 
