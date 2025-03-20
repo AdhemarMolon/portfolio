@@ -34,6 +34,7 @@ body {
     display: flex; /* Usa flexbox para organizar os itens dentro da barra */
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
     z-index: 1000; /* Garante que a barra fique acima de outros elementos da página */
+    overflow-x: auto; /* Ativa a rolagem no eixo X */
 }
 
 /* Container interno da barra para organizar os elementos */
