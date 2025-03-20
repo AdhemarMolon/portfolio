@@ -40,7 +40,7 @@ body {
 .ConteudoBarra {
     display: flex; /* Usa flexbox para alinhar os itens horizontalmente */
     align-items: center; /* Centraliza os itens verticalmente */
-    gap: 30px; /* Define o espaçamento entre os elementos dentro da barra */
+    gap: 50px; /* Define o espaçamento entre os elementos dentro da barra */
     max-width: 1200px; /* Limita a largura máxima do conteúdo para não ficar muito largo */
     width: 100%; /* Garante que o conteúdo ocupe toda a largura disponível até o limite */
 }
@@ -91,7 +91,7 @@ body {
 /* Container dos hyperlinks */
 .Hiperlinks {
     display: flex; /* Usa flexbox para alinhar os links horizontalmente */
-    gap: 15px; /* Espaçamento entre os links */
+    gap: 35px; /* Espaçamento entre os links */
 }
 
 /* Estilizando os links (Currículo, Projetos, Hackathon) */
