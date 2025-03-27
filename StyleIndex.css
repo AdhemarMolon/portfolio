@@ -119,7 +119,7 @@ a#Curriculo:hover, a#Projetos:hover, a#Hackathon:hover {
     padding: .4em; /* Espaçamento interno */
     border-radius: 6px; /* Bordas arredondadas */
     position: absolute; /* Posiciona o card em relação ao body */
-    top: calc(30% + 60px); /* Centraliza verticalmente, deslocado para baixo pela barra */
+    top: calc(30% + px); /* Centraliza verticalmente, deslocado para baixo pela barra */
     left: 50%; /* Centraliza horizontalmente */
     transform: translateX(-50%); /* Centraliza apenas horizontalmente */
     z-index: 500; /* Garante que o card fique abaixo da barra, mas acima do fundo */
