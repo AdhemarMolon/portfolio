@@ -236,6 +236,37 @@ a#Curriculo:hover, a#Projetos:hover, a#Hackathon:hover {
     display: none; /* Esconde o texto para celular por padrão */
 }
 
+/* Estilização do Contêiner do Relógio */
+#clock-container {
+    position: relative;
+    z-index: 600; /* Acima de outros elementos, mas ajustável */
+    width: 100px; /* Ajusta a largura ao conteúdo */
+}
+
+/* Estilização do Relógio */
+.clock {
+    display: flex;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 0px;
+    position: relative;
+    color: #33c860; /* Contraste com o fundo branco */
+}
+
+/* Estilização dos Dígitos */
+.digit {
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    margin: 0 0px; /* Espaçamento entre os dígitos */
+}
+
+/* Estilização do Conteúdo dos Dígitos */
+.digit span {
+    display: block;
+}
+
+
 /*========= RESPONSIVIDADE ========= */
 
 /* Ajustes para tablets e telas médias (até 768px) */
@@ -335,7 +366,7 @@ a#Curriculo:hover, a#Projetos:hover, a#Hackathon:hover {
     /* Ajustando o card para telas de celular */
     .card {
         width: 175px; /* Reduz a largura do card para caber melhor em telas pequenas */
-        top: calc(40% + 80px); /* Ajusta a posição vertical considerando a barra maior em celulares */
+        top: calc(40% + 40px); /* Ajusta a posição vertical considerando a barra maior em celulares */
         left: 50%; /* Mantém centralizado horizontalmente */
         transform: translateX(-50%); /* Centraliza apenas horizontalmente */
     }
@@ -369,7 +400,7 @@ a#Curriculo:hover, a#Projetos:hover, a#Hackathon:hover {
         /* Ajustando o autor para telas de celular */
         .author {
             font-size: 10px; /* Reduz o tamanho da fonte do autor */
-            padding-top: 15px; /* Reduz o espaçamento acima */
+            padding-top: 0px; /* Reduz o espaçamento acima */
         }
 
         /* Esconde o texto para PC em telas de celular */
@@ -385,7 +416,7 @@ a#Curriculo:hover, a#Projetos:hover, a#Hackathon:hover {
 
     /* Ajustando o fundo do container para telas de celular */
     body {
-        padding-top: 160px; /* Aumenta o espaço no topo para caber a barra ajustada */
+        padding-top: 16px; /* Aumenta o espaço no topo para caber a barra ajustada */
         margin: 0; /* Garante que não haja margens extras */
     }
 
@@ -400,6 +431,28 @@ a#Curriculo:hover, a#Projetos:hover, a#Hackathon:hover {
         top: 0; /* Alinha ao topo */
         left: 0; /* Alinha à esquerda */
         z-index: 1; /* Fica abaixo da barra e do card */
+    }
+}
+
+/* Responsividade para tablets e telas médias (até 768px) */
+@media (max-width: 768px) {
+    #clock-container {
+        width: 80px; /* Reduz a largura para telas médias */
+    }
+    .clock {
+        font-size: 8px; /* Reduz o tamanho da fonte proporcionalmente */
+    }
+}
+
+/* Responsividade para celulares (até 480px) */
+@media (max-width: 480px) {
+    #clock-container {
+        width: 60px; /* Reduz ainda mais a largura para telas pequenas */
+        top: 259px;
+
+    }
+    .clock {
+        font-size: 6px; /* Reduz o tamanho da fonte para caber bem */
     }
 }
 
