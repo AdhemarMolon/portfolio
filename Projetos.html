@@ -6,34 +6,16 @@
     <title>Projetos</title>
 </head>
 
-
 <style>
-    body{
-    width: 100%; /* Ocupa toda a largura da tela */
-    height: 100vh; /* Força a altura total da viewport, ignorando padding do body */
-    --s: 200px; /* Controla o tamanho do padrão */
-    --c1: #1d1d1d; /* Cor 1 do gradiente */
-    --c2: #4e4f51; /* Cor 2 do gradiente */
-    --c3: #3c3c3c; /* Cor 3 do gradiente */
-    background: repeating-conic-gradient(
-          from 30deg,
-          #0000 0 120deg, /* Transparente até 120 graus */
-          var(--c3) 0 180deg /* Cor 3 até 180 graus */
-        )
-        calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
-      repeating-conic-gradient(
-        from 30deg,
-        var(--c1) 0 60deg, /* Cor 1 até 60 graus */
-        var(--c2) 0 120deg, /* Cor 2 até 120 graus */
-        var(--c3) 0 180deg /* Cor 3 até 180 graus */
-      ); /* Define o padrão de gradiente cônico repetitivo */
-    background-size: var(--s) calc(var(--s) * 0.577); /* Define o tamanho do padrão */
-    position: absolute; /* Posiciona o container em relação ao body */
-    top: 0; /* Alinha ao topo da tela */
-    left: 0; /* Alinha à esquerda */
-    z-index: 1; /* Fica abaixo da barra e do card */
-    padding-top: 120px; /* Espaço interno para não sobrepor a barra */
-    box-sizing: border-box; /* Garante que padding não aumente a altura */
+  body {
+    background-color: #2a2a2a;
+    font-family: 'Press Start 2P', cursive;
+    color: #ffffff;
+    margin: 0 auto;
+    line-height: 1.6;
+    padding-top: 120px;
+    min-height: 100vh;
+    position: relative;
 }
 </style>
 
