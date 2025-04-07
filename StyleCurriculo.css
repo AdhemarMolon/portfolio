@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Reset geral e tratamento de responsividade */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-color: #2a2a2a;
+  font-family: 'Press Start 2P', cursive;
+  color: #ffffff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Envolve tudo no centro */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px;
+}
+
+/* Container principal */
+.curriculo-container {
+  background-color: #1e1e1e;
+  border: 2px solid #444;
+  border-radius: 8px;
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 0 0 transparent; /* remove sombras se houver interferência */
+}
+
+/* Imagem do currículo */
+.curriculo-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #444;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+/* Botão responsivo e elegante */
+.btn-download button {
+  background-color: #333;
+  color: #fff;
+  border: 2px solid #555;
+  padding: 12px 20px;
+  font-size: 12px;
+  font-family: 'Press Start 2P', cursive;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.btn-download button:hover {
+  background-color: #444;
+  border-color: #666;
+}
+
+.btn-download button:active {
+  background-color: #222;
+  border-color: #555;
+}
+
+/* Reforço pro fundo ser sempre escuro no mobile */
+@media (prefers-color-scheme: light) {
+  html, body {
+    background-color: #2a2a2a;
+  }
+}
+
+/* Ajustes extras pra telas menores */
+@media (max-width: 480px) {
+  .curriculo-container {
+    padding: 20px;
+  }
+
+  .btn-download button {
+    font-size: 10px;
+    padding: 10px;
+  }
+}
