@@ -196,6 +196,35 @@ a#Curriculo:hover, a#Projetos:hover, a#Hackathon:hover {
 }
 
 
+/* ===================== RELOGIO SIMPLES ===================== */
+
+
+/*Relogio simples */
+
+#clock-container {
+    text-align: center;
+    display: none;
+}
+
+.clock {
+    display: flex;
+    font-size: 2rem;
+    gap: 0.25rem;
+}
+
+.digit {
+    padding: 0.2rem 0.5rem;
+    background: #222;
+    border-radius: 0.3rem;
+}
+
+@media (min-width: 768px) {
+    #clock-container {
+        display: block;
+    }
+}
+
+
 /* ===================== RESPONSIVIDADE ===================== */
 
 @media (max-width: 768px) {
