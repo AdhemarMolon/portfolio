@@ -122,85 +122,74 @@ a#Curriculo:hover, a#Projetos:hover, a#Hackathon:hover {
 
 
 
-/* From Uiverse.io by Ratinax */ 
-
-
 @media(max-width: 990px) {
     
-.loader {
-    display: flex;
-    justify-content: space-between; /* mantém os filhos espaçados */
-    align-items: center; /* alinha verticalmente os filhos no centro do container */
-    
+/* From Uiverse.io by bociKond */ 
+.spinner {
+    width: 80.4px;
+    height: 80.4px;
+    --clr: rgb(247, 197, 159);
+    --clr-alpha: rgb(247, 197, 159, 0.1);
+    animation: spinner 1.6s infinite ease;
+    transform-style: preserve-3d;
+  
+    /* Novo posicionamento */
     position: absolute;
-    top: 60%; /* um pouco abaixo do centro vertical (50% seria o centro) */
-    left: 50%; /* centraliza horizontalmente */
-    transform: translate(-50%, -50%); /* corrige o deslocamento baseado no tamanho da div */
-    
+    left: 40%;
+    top: 60%; /* um pouco abaixo do meio */
+    transform: translateX(-50%); /* centraliza horizontalmente */
   }
   
-
-.pac-man {
-  width: 15em;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: radial-gradient(farthest-side,#000 98%,#0000) 7em 0.71em/.8em .8em no-repeat,  
-    #ffcc00;
-  box-shadow: .2em -.6em 1.2em 0em inset rgba(0, 0, 0, 0.7);
-  animation: l4 .5s infinite steps(5) alternate;
-  z-index: 999;
-}
-
-.point {
-  margin-top: 2em;
-  position: absolute;
-  margin-left: .4em;
-  width: 3em;
-  height: 3em;
-  background-color: #ffffff;
-  border-radius: 50%;
-}
-
-.p1 {
-  margin-left: 18em;
-  animation: moove-p1 2s linear infinite;
-}
-
-.p2 {
-  margin-left: 15em;
-  animation: moove-p2 2s linear infinite;
-}
-
-@keyframes moove-p1 {
-  0% {
-    margin-left: 8em;
+  
+  .spinner > div {
+    background-color: var(--clr-alpha);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    border: 3.5px solid var(--clr);
   }
-
-  100% {
-    margin-left: 0em;
+  
+  .spinner div:nth-of-type(1) {
+    transform: translateZ(-35.2px) rotateY(180deg);
   }
-}
-
-@keyframes moove-p2 {
-  0% {
-    margin-left: 16em;
+  
+  .spinner div:nth-of-type(2) {
+    transform: rotateY(-270deg) translateX(50%);
+    transform-origin: top right;
   }
-
-  100% {
-    margin-left: 8em;
+  
+  .spinner div:nth-of-type(3) {
+    transform: rotateY(270deg) translateX(-50%);
+    transform-origin: center left;
   }
-}
-
-@keyframes l4 {
- 
-  0% {
-    clip-path: polygon(50% 50%,100% 0,100% 0,0 0,0 100%,100% 100%,100% 100%)
+  
+  .spinner div:nth-of-type(4) {
+    transform: rotateX(90deg) translateY(-50%);
+    transform-origin: top center;
   }
-
-  100% {
-    clip-path: polygon(50% 50%,100% 65%,100% 0,0 0,0 100%,100% 100%,100%  35%)
+  
+  .spinner div:nth-of-type(5) {
+    transform: rotateX(-90deg) translateY(50%);
+    transform-origin: bottom center;
   }
-}
+  
+  .spinner div:nth-of-type(6) {
+    transform: translateZ(35.2px);
+  }
+  
+  @keyframes spinner {
+    0% {
+      transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+    }
+  
+    50% {
+      transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+    }
+  
+    100% {
+      transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+    }
+  }
 
 }
 
