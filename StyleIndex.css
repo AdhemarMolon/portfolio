@@ -118,8 +118,15 @@ a#Curriculo:hover, a#Projetos:hover, a#Hackathon:hover {
 
 /* ============ PAC MAN (IMPORTADO DO UIVERSE) ============== */
 
+/* APENAS NO CELULAR */ 
+
+
 
 /* From Uiverse.io by Ratinax */ 
+
+
+@media(max-width: 990px) {
+    
 .loader {
     display: flex;
     justify-content: space-between; /* mantém os filhos espaçados */
@@ -195,9 +202,11 @@ a#Curriculo:hover, a#Projetos:hover, a#Hackathon:hover {
   }
 }
 
+}
 
 /* ===================== RELOGIO SIMPLES ===================== */
 
+/* Apenas pc */
 
 /*Relogio simples */
 
@@ -208,7 +217,7 @@ a#Curriculo:hover, a#Projetos:hover, a#Hackathon:hover {
 
 .clock {
     display: flex;
-    font-size: 2rem;
+    font-size: 1rem;
     gap: 0.25rem;
 }
 
@@ -223,6 +232,28 @@ a#Curriculo:hover, a#Projetos:hover, a#Hackathon:hover {
         display: block;
     }
 }
+
+/* ============ FUNDO DE TELA (Imagem gerada pelo gpt ) ============== */
+
+/* Apenas pc */
+
+#FUNDO{
+    display: none;
+}
+
+@media (min-width: 1025px) {
+#FUNDO{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;    /* Garante que não deforme */
+    position: fixed;      /* Pra grudar na tela */
+    top: 80px;
+    left: 0;
+    z-index: -1;
+    display: block;
+}
+}
+
 
 
 /* ===================== RESPONSIVIDADE ===================== */
