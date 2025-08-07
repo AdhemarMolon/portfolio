@@ -1,11 +1,10 @@
-// src/App.tsx
+// src/App.tsx - VERSÃO CORRIGIDA
 
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// 1. IMPORTAR O LAYOUT (estava faltando)
-import Layout from "./components/ui/Layout"; // Certifique-se que você criou este arquivo e o caminho está correto
+import Layout from "./components/ui/Layout"; 
 
 import Home from "./pages/Home";
 import Resume from "./pages/Resume";
@@ -18,18 +17,16 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <BrowserRouter>
+      {/* AQUI ESTÁ A CORREÇÃO FINAL */}
+      <BrowserRouter basename="/portfolio">
         <Routes>
-          {/* 2. ROTA PAI COM O ELEMENTO LAYOUT (estava faltando) */}
           <Route path="/" element={<Layout />}>
-            {/* Rotas filhas que serão renderizadas dentro do <Outlet /> */}
             <Route index element={<Home />} />
             <Route path="resume" element={<Resume />} />
             <Route path="projects" element={<Projects />} />
             <Route path="extras" element={<Extras />} />
-          </Route> {/* <- Este fechamento agora tem uma abertura correspondente */}
+          </Route>
 
-          {/* Rota de "Não encontrado" continua separada */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
