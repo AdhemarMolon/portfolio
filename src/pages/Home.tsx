@@ -1,13 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
 // Ícones atualizados para refletir as novas especialidades
-import { Search, HardHat, Cpu, Code2, ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
+import { HardHat, Cpu, Code2, ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
-  const [searchTerm, setSearchTerm] = useState('');
   const [typewriterText, setTypewriterText] = useState('');
   // Texto do typewriter atualizado para "Cientista da Computação"
   const fullText = "Cientista da Computação";

@@ -1,7 +1,3 @@
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
@@ -9,22 +5,14 @@ import {
   Mail, 
   Phone, 
   MapPin, 
-  Dumbbell, 
-  Code, 
-  Book, 
+  Dumbbell,  
   Trophy,
-  Send,
   CheckCircle,
   Clock,
   Tv
 } from 'lucide-react';
 
 const Extras = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
 
   const hobbies = [
     {
@@ -61,21 +49,6 @@ const Extras = () => {
     }
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // TODO: Implementar envio real do formulário
-    console.log('Form submitted:', formData);
-    alert('Mensagem enviada! Entraremos em contato em breve.');
-    setFormData({ name: '', email: '', message: '' });
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
 
   return (
     <div className="min-h-screen bg-background pt-24 pb-12 px-4">

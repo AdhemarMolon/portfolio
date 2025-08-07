@@ -8,11 +8,8 @@ import {
   Briefcase, 
   Code, 
   Database, 
-  Smartphone,
-  Globe,
   GitBranch,
   Palette,
-  Bot,
   Wrench
 } from 'lucide-react';
 

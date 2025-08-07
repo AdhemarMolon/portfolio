@@ -1,14 +1,17 @@
+// src/pages/Projects.tsx
+
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Search, Filter, Github, ExternalLink, Code2, TrendingUp } from 'lucide-react';
+// CORREÇÃO: Removido 'TrendingUp' que não estava sendo usado
+import { Search, Filter, Github, ExternalLink, Code2 } from 'lucide-react'; 
 import ProjectCard from '@/components/ProjectCard';
 
 const Projects = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedFilter, setSelectedFilter] = useState('all');
 
-  // Dados dos projetos com mais informações
+  // Dados dos projetos (sem alteração)
   const projects = [
     {
       id: 1,
@@ -70,6 +73,7 @@ const Projects = () => {
     }
   ];
 
+  // O resto do arquivo até o grid de projetos continua igual...
   const filters = [
     { id: 'all', label: 'Todos', count: projects.length },
     { id: 'web', label: 'Web', count: projects.filter(p => p.category === 'web').length },
@@ -77,7 +81,6 @@ const Projects = () => {
     { id: 'Sistemas de Baixo Nível', label: 'Sistemas', count: projects.filter(p => p.category === 'Sistemas de Baixo Nível').length },
   ];
 
-  // Filtrar projetos
   const filteredProjects = projects.filter(project => {
     const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -140,7 +143,6 @@ const Projects = () => {
             ))}
           </div>
         </div>
-
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 slide-up">
           {filteredProjects.map((project, index) => (
@@ -154,17 +156,20 @@ const Projects = () => {
                 description={project.description}
                 technologies={project.technologies}
                 githubUrl={project.githubUrl}
-                liveUrl={project.liveUrl}
+                // CORREÇÃO: Trata o valor nulo do liveUrl
+                liveUrl={project.liveUrl || undefined}
                 category={project.category}
-                featured={project.featured}
-                stars={project.stars}
-                forks={project.forks}
+                // CORREÇÃO: Removidas as props que não existem nos seus dados
+                // featured={project.featured}
+                // stars={project.stars}
+                // forks={project.forks}
                 lastUpdated={project.lastUpdated}
               />
             </div>
           ))}
         </div>
 
+        {/* O resto do arquivo pode continuar igual */}
         {/* No Results */}
         {filteredProjects.length === 0 && (
           <div className="text-center py-16 slide-up">

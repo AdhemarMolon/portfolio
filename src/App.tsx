@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // 1. IMPORTAR O LAYOUT (estava faltando)
-import Layout from "./components/Layout"; // Certifique-se que você criou este arquivo e o caminho está correto
+import Layout from "./components/ui/Layout"; // Certifique-se que você criou este arquivo e o caminho está correto
 
 import Home from "./pages/Home";
 import Resume from "./pages/Resume";

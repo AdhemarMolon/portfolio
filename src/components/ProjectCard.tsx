@@ -1,5 +1,4 @@
 import React from "react";
-import { Badge } from "@/components/ui/badge";
 import { Github, ExternalLink, Star, GitFork, Calendar } from "lucide-react";
 
 type ProjectCardProps = {
