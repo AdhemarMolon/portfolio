@@ -1,13 +1,16 @@
+// src/pages/Home.tsx
+
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-// Ícones atualizados para refletir as novas especialidades
 import { HardHat, Cpu, Code2, ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+// PASSO 1: Importe a sua foto de perfil como uma variável
+import fotoPerfil from '@/assets/AdhemarFoto.jpeg';
+
 const Home = () => {
   const [typewriterText, setTypewriterText] = useState('');
-  // Texto do typewriter atualizado para "Cientista da Computação"
   const fullText = "Cientista da Computação";
 
   useEffect(() => {
@@ -24,7 +27,6 @@ const Home = () => {
     return () => clearInterval(timer);
   }, []);
 
-  // Seção de especialidades completamente reformulada
   const skills = [
     {
       icon: HardHat,
@@ -48,18 +50,16 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 overflow-hidden">
-        {/* Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5"></div>
         <div className="absolute top-20 left-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
 
         <div className="relative max-w-6xl mx-auto text-center">
-          {/* TODO: Área para foto de perfil */}
             <div className="relative w-36 h-36 mx-auto mb-8 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-xl glow-effect border-4 border-white/30">
+            {/* PASSO 2: Use a variável importada no 'src' da imagem */}
             <img
-              src="/imagens/AdhemarFoto.jpeg"
+              src={fotoPerfil}
               alt="Adhemar"
               className="w-full h-full rounded-full object-cover transition-transform duration-300 hover:scale-105"
             />
@@ -78,15 +78,11 @@ const Home = () => {
             </h2>
           </div>
 
-          {/* Descrição principal atualizada */}
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12 slide-up">
             Estudante na Universidade de São Paulo (USP), movido por desafios técnicos e pela paixão de transformar ideias em software,
             sempre buscando aprender e inovar. Aqui está um pouco do meu portfólio e habilidades.
           </p>
 
-          
-
-          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 slide-up">
             <Button size="lg" className="hero-gradient glow-effect" asChild>
               <Link to="/projects">
@@ -101,7 +97,6 @@ const Home = () => {
             </Button>
           </div>
 
-            {/* Social Links */}
             <div className="flex justify-center gap-6 slide-up">
             <Button
               variant="ghost"
@@ -150,7 +145,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Skills Section */}
       <section className="py-20 px-4 bg-muted/30">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-3xl font-bold text-center mb-12 fade-in">
@@ -180,13 +174,11 @@ const Home = () => {
         </div>
       </section>
 
-      {/* About Preview */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-3xl font-bold mb-8 fade-in">
             Sobre <span className="text-primary">Mim</span>
           </h3>
-          {/* Texto "Sobre Mim" atualizado */}
           <p className="text-lg text-muted-foreground mb-8 slide-up">
             Curioso por natureza, com um espírito inquieto para criar, testar e melhorar. Minha jornada na 
             computação na USP é complementada pela disciplina da academia, sempre buscando o próximo desafio.

@@ -1,3 +1,5 @@
+// src/pages/Resume.tsx
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -13,16 +15,20 @@ import {
   Wrench
 } from 'lucide-react';
 
+// PASSO 1: Importe o seu CV como uma variável
+import curriculoPDF from '@/assets/CurriculoAdhemar.pdf';
+
 const Resume = () => {
   const personalInfo = {
     name: "Adhemar",
     age: 22,
     location: "São Carlos, SP",
     email: "adhemarmolon@usp.br",
-    github: "AdhemarMolon", // Exemplo, pegue do PDF se for diferente
-    linkedin: "Adhemar Molon Neto" // Exemplo, pegue do PDF se for diferente
+    github: "github.com/AdhemarMolon", // Corrigido para ser um link completo
+    linkedin: "linkedin.com/in/adhemar-molon-neto-6b5647268/" // Corrigido
   };
 
+  //... (o restante dos seus dados continua igual)
   const education = [
     {
       degree: "Bacharelado em Ciências da Computação",
@@ -83,12 +89,8 @@ const Resume = () => {
       "Git", "GitHub", "VS Code", "Figma", "Linux", "LaTeX"
     ]
   };
-
-  const handleDownloadCV = () => {
-    // Substitua pelo link real do seu currículo em PDF
-    const cvUrl = 'public/imagens/CurriculoAdhemar.pdf'; 
-    window.open(cvUrl, '_blank');
-  };
+  
+  // PASSO 2: A função handleDownloadCV não é mais necessária, podemos removê-la.
 
   return (
     <div className="min-h-screen bg-background pt-24 pb-12 px-4">
@@ -101,16 +103,20 @@ const Resume = () => {
           <p className="text-muted-foreground text-lg mb-8">
             Minha trajetória, projetos e competências no mundo do desenvolvimento.
           </p>
+          {/* PASSO 3: Transformamos o botão em um link de download */}
           <Button 
             size="lg" 
-            onClick={handleDownloadCV}
+            asChild // Importante: permite que o botão se comporte como seu filho (o link 'a')
             className="hero-gradient glow-effect animate-pulse-glow"
           >
-            <Download className="mr-2" size={20} />
-            Download CV (PDF)
+            <a href={curriculoPDF} download="Adhemar-Molon-CV.pdf">
+              <Download className="mr-2" size={20} />
+              Download CV (PDF)
+            </a>
           </Button>
         </div>
 
+        {/* ... (o restante do seu JSX continua exatamente igual, não precisa mudar nada) ... */}
         {/* Personal Info */}
         <Card className="card-elegant mb-8 slide-up">
           <CardHeader>
@@ -257,11 +263,13 @@ const Resume = () => {
           </p>
           <Button 
             size="lg" 
-            onClick={handleDownloadCV}
+            asChild
             className="hero-gradient"
           >
-            <Download className="mr-2" size={20} />
-            Baixar CV (PDF)
+            <a href={curriculoPDF} download="Adhemar-Molon-CV.pdf">
+              <Download className="mr-2" size={20} />
+              Baixar CV (PDF)
+            </a>
           </Button>
         </div>
       </div>
