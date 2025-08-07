@@ -1,0 +1,233 @@
+{
+  "home": {
+    "profileAlt": "Foto de Adhemar",
+    "greetingPart1": "Olá, eu sou",
+    "jobTitle": "Cientista da Computação",
+    "introParagraph": "Estudante na Universidade de São Paulo (USP), movido por desafios técnicos e pela paixão de transformar ideias em software, sempre buscando aprender e inovar. Aqui está um pouco do meu portfólio e habilidades.",
+    "viewProjectsButton": "Ver Projetos",
+    "downloadCVButton": "Baixar CV",
+    "focusAreasTitlePart1": "Minhas",
+    "focusAreasTitlePart2": "Áreas de Foco",
+    "skills": {
+      "softwareEngineering": {
+        "title": "Engenharia de Software",
+        "description": "Design, arquitetura, testes e metodologias (com foco nas ágeis) para construir soluções robustas e escaláveis."
+      },
+      "algorithms": {
+        "title": "Desenvolvimento e Algoritmos",
+        "description": "Foco em estruturas de dados, complexidade e na constante resolução de problemas relacionados a programação competitiva."
+      },
+      "webDev": {
+        "title": "Desenvolvimento Web",
+        "description": "Interesse em tecnologias web, frameworks modernos, desenvolvimento full-stack e implementação de APIs."
+      }
+    },
+    "aboutMeTitlePart1": "Sobre",
+    "aboutMeTitlePart2": "Mim",
+    "aboutMeParagraph": "Curioso por natureza, com um espírito inquieto para criar, testar e melhorar. Minha jornada na computação na USP é complementada pela disciplina da academia, sempre buscando o próximo desafio.",
+    "learnMoreButton": "Saiba Mais"
+  },
+  "nav": {
+    "home": "Início",
+    "resume": "Currículo",
+    "projects": "Projetos",
+    "extras": "Extras"
+  },
+
+
+
+"extrasPage": {
+  "header": {
+    "titlePart1": "Um Pouco",
+    "titlePart2": "Mais",
+    "subtitle": "Além do código: meus interesses, certificações e como entrar em contato comigo."
+  },
+  "hobbies": {
+    "titlePart1": "Meus",
+    "titlePart2": "Interesses",
+    "gym": {
+      "title": "Academia",
+      "description": "Pratico musculação regularmente, focando em força e bem-estar físico."
+    },
+    "leetcode": {
+      "title": "LeetCode",
+      "description": "Resolvo exercícios do LeetCode para aprimorar minhas habilidades em algoritmos e lógica de programação."
+    },
+    "soccer": {
+      "title": "Futebol",
+      "description": "Gosto de jogar e assistir futebol, acompanhando campeonatos e partidas sempre que possível."
+    }
+  },
+  "certifications": {
+    "titlePart1": "Certificações",
+    "titlePart2": " & Cursos",
+    "csDegree": {
+      "title": "Bacharelado em Ciência da Computação",
+      "provider": "Universidade de São Paulo (USP)",
+      "date": "2024 - atual"
+    },
+    "logisticsDegree": {
+      "title": "Técnico em Logística",
+      "provider": "Instituto Federal de São Paulo (IFSP)",
+      "date": "2022"
+    },
+    "completed": "Concluído",
+    "inProgress": "Em Progresso"
+  },
+  "contact": {
+    "titlePart1": "Entre em",
+    "titlePart2": "Contato",
+    "location": "São Carlos, SP - Brasil"
+  },
+  "hackathons": {
+    "title": "Hackathons em Destaque",
+    "riot": {
+      "badge": "3º Lugar",
+      "title": "Hackathon Riot Games & b1ld",
+      "description": "Conquistei o <b>3º lugar</b> desenvolvendo, junto à minha equipe, um <b>bot de Discord com IA</b> para engajar comunidades de gaming. A solução utilizou <b>Gemini</b> para processamento de linguagem natural e integração com <b>APIs ChallengerMode</b> para gerenciamento de torneios."
+    },
+    "receitaFederal": {
+      "badge": "Premiado",
+      "title": "1º Hackathon da Receita Federal",
+      "description": "Premiação recebida em um evento de grande porte, com <b>+2.000 participantes</b> e cerca de <b>400 projetos</b> inscritos, distribuídos em <b>6 polos pelo Brasil</b>. Nosso projeto focou em <b>sustentabilidade</b> e <b>impacto social</b>, propondo soluções inovadoras para desafios reais da Receita Federal."
+    }
+  },
+  "footer": {
+    "titlePart1": "Vamos Construir Algo",
+    "titlePart2": "Incrível",
+    "titlePart3": " Juntos!",
+    "subtitle": "Estou sempre aberto a novos desafios e oportunidades de colaboração."
+  }
+},
+
+"projectsPage": {
+  "header": {
+    "titlePart1": "Meus",
+    "titlePart2": "Projetos",
+    "subtitle": "Uma coleção cuidadosamente selecionada dos meus trabalhos e projetos pessoais. Cada projeto representa um desafio superado e uma oportunidade valiosa de aprendizado e crescimento."
+  },
+  "search": {
+    "placeholder": "Pesquisar projetos, tecnologias..."
+  },
+  "filters": {
+    "all": "Todos",
+    "web": "Web",
+    "bot": "Bot",
+    "systems": "Sistemas",
+    "openSource": "Open Source"
+  },
+  "projects": {
+    "portfolio": {
+      "title": "Portfolio Pessoal",
+      "description": "Site pessoal desenvolvido com React, TypeScript e Tailwind CSS. Inclui animações, design responsivo e otimização para SEO. Sistema de temas claro/escuro e performance otimizada."
+    },
+    "databaseC": {
+      "title": "Banco de Dados em C",
+      "description": "Sistema de gerenciamento de banco de dados implementado em C puro, focado na manipulação de arquivos binários. O projeto demonstra conceitos avançados de estruturas de dados, alocação eficiente de memória e operações CRUD otimizadas para performance."
+    },
+    "discordBot": {
+      "title": "Bot de Discord com IA Gemini",
+      "description": "Bot para Discord que utiliza a API do Gemini para gerar e exibir mensagens customizadas. Este projeto serviu como base para uma solução desenvolvida em um hackathon da USP, organizado pela Riot Games, onde a equipe alcançou o pódio."
+    },
+    "biblioLinks": {
+      "title": "BiblioLinks | Agregador de Links da PUSP-SC",
+      "description": "Alternativa de código aberto ao Linktree, criada para centralizar os links importantes da Biblioteca da Prefeitura do Campus da USP de São Carlos. Projeto desenvolvido com tecnologias web fundamentais, focado em simplicidade e customização."
+    },
+    "carStore": {
+      "title": "Loja de Carros",
+      "description": "Projeto acadêmico de uma loja de carros virtual com perfis de cliente e administrador. Fullstack com autenticação, CRUD de carros e carrinho de compras. Desenvolvido com React, Node.js e MongoDB."
+    },
+    "beaba": {
+      "title": "Bê-á-bá da Computação (Contribuição)",
+      "description": "Contribuição para um projeto open-source educacional que ensina os fundamentos da ciência da computação. O trabalho envolveu a criação do conteúdo sobre 'Circuitos para Operações Aritméticas', explicando conceitos de lógica combinacional."
+    }
+  },
+  "noResults": {
+    "title": "Nenhum projeto encontrado",
+    "description": "Não encontramos projetos que correspondam aos seus critérios de busca. Tente ajustar os filtros ou termos de pesquisa.",
+    "clearButton": "Limpar Filtros"
+  },
+  "cta": {
+    "title": "Gostou do que viu?",
+    "description": "Estes são apenas alguns dos meus projetos. Estou sempre trabalhando em algo novo e interessante. Que tal conversarmos sobre uma possível colaboração?",
+    "githubButton": "Ver Mais no GitHub",
+    "extrasButton": "Extras"
+  }
+},
+
+"resumePage": {
+  "header": {
+    "titlePart1": "Meu",
+    "titlePart2": "Currículo",
+    "subtitle": "Minha trajetória, projetos e competências no mundo do desenvolvimento.",
+    "downloadButton": "Download CV (PDF)"
+  },
+  "personalInfo": {
+    "title": "Informações Pessoais",
+    "name": "Nome",
+    "age": "Idade",
+    "years": "anos",
+    "location": "Localização",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "experience": {
+    "title": "Experiência Profissional",
+    "uspIntern": {
+      "role": "Estagiário de Desenvolvimento",
+      "company": "Biblioteca do IAU - USP São Carlos",
+      "period": "2024 - Presente",
+      "task1": "Manutenção e atualização do site institucional em WordPress, com foco em usabilidade e arquitetura da informação.",
+      "task2": "Desenvolvimento de aplicações web internas com React, TypeScript e Tailwind CSS para melhorar a experiência do usuário.",
+      "task3": "Análise quantitativa de métricas de desempenho digital para extrair padrões e apoiar a tomada de decisão."
+    }
+  },
+  "projects": {
+    "title": "Projetos Técnicos",
+    "carStore": {
+      "title": "Loja de Carros Clássicos - Projeto Full Stack",
+      "description": "Aplicação web completa simulando uma loja de veículos, com cadastro, exibição e venda. O front-end foi feito em React com Vite e Tailwind CSS, e o back-end com Node.js e MongoDB para gerenciar estoque e autenticação.",
+      "tags": ["React", "Node.js", "MongoDB", "Tailwind CSS", "Full Stack"]
+    },
+    "discordBot": {
+      "title": "Bot com IA para Discord (Hackathon)",
+      "description": "Bot para Discord que interage com usuários usando a API do Gemini. A equipe ficou no pódio da competição da SEMCOMP/USP.",
+      "tags": ["Python", "Gemini API", "WebSockets", "Inteligência Artificial"]
+    },
+    "orcid": {
+      "title": "Projeto ORCID - Engenharia de Software",
+      "description": "Aplicação web para organização e visualização de dados acadêmicos, baseada em requisitos de docentes da USP e utilizando a API pública do ORCID.",
+      "tags": ["Engenharia de Software", "API REST", "React", "Prototipação"]
+    }
+  },
+  "education": {
+    "title": "Formação Acadêmica",
+    "csDegree": {
+      "degree": "Bacharelado em Ciências da Computação",
+      "institution": "Universidade de São Paulo (USP) - São Carlos",
+      "period": "2023 - Presente",
+      "description": "Foco em desenvolvimento web, machine learning, visão computacional e engenharia de software."
+    },
+    "logisticsDegree": {
+      "degree": "Técnico em Logística",
+      "institution": "Instituto Federal de São Paulo (IFSP)",
+      "period": "2020 - 2022",
+      "description": "Curso técnico completo."
+    }
+  },
+  "skills": {
+    "titlePart1": "Habilidades",
+    "titlePart2": "Técnicas",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "concepts": "Conceitos e Metodologias",
+    "tools": "Ferramentas"
+  },
+  "footer": {
+    "cta": "Curtiu o que viu? Vamos criar algo incrível juntos!",
+    "downloadButton": "Baixar CV (PDF)"
+  }
+}
+  
+}

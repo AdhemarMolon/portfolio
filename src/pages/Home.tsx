@@ -5,13 +5,19 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { HardHat, Cpu, Code2, ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-// PASSO 1: Importe a sua foto de perfil como uma variável
 import fotoPerfil from '@/assets/AdhemarFoto.jpeg';
 
+// 1. Importe o hook de tradução
+import { useTranslation } from 'react-i18next';
+
 const Home = () => {
+  // 2. Inicialize o hook para ter acesso à função 't'
+  const { t } = useTranslation();
+  
   const [typewriterText, setTypewriterText] = useState('');
-  const fullText = "Cientista da Computação";
+  
+  // O texto do typewriter agora vem do arquivo de tradução
+  const fullText = t('home.jobTitle');
 
   useEffect(() => {
     let i = 0;
@@ -25,25 +31,23 @@ const Home = () => {
     }, 100);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [fullText]); // Adicionado fullText como dependência do useEffect
 
+  // 3. O array de skills agora contém apenas as chaves para a tradução
   const skills = [
     {
       icon: HardHat,
-      title: "Engenharia de Software",
-      description: "Design, arquitetura, testes e metodologias ( com foco nas ágeis ) para construir soluções robustas e escaláveis.",
+      key: "softwareEngineering", // Chave para buscar o título e a descrição
       color: "from-blue-500/20 to-cyan-500/20"
     },
     {
       icon: Code2,
-      title: "Desenvolvimento e Algoritmos",
-      description: "Foco em estruturas de dados, complexidade e na constante resolução de problemas relacionados a programação competitiva.",
+      key: "algorithms",
       color: "from-green-500/20 to-emerald-500/20"
     },
     {
       icon: Cpu,
-      title: "Desenvolvimento Web",
-      description: "Interesse em tecnologias web, frameworks modernos, desenvolvimento full-stack e implementação de APIs.",
+      key: "webDev",
       color: "from-purple-500/20 to-pink-500/20"
     }
   ];
@@ -57,16 +61,15 @@ const Home = () => {
 
         <div className="relative max-w-6xl mx-auto text-center">
             <div className="relative w-36 h-36 mx-auto mb-8 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-xl glow-effect border-4 border-white/30">
-            {/* PASSO 2: Use a variável importada no 'src' da imagem */}
             <img
               src={fotoPerfil}
-              alt="Adhemar"
+              alt={t('home.profileAlt')} // Alt text traduzido
               className="w-full h-full rounded-full object-cover transition-transform duration-300 hover:scale-105"
             />
             </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 fade-in">
-            Olá, eu sou{' '}
+            {t('home.greetingPart1')}{' '}
             <span className="hero-gradient bg-clip-text text-transparent">
               Adhemar
             </span>
@@ -79,66 +82,37 @@ const Home = () => {
           </div>
 
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12 slide-up">
-            Estudante na Universidade de São Paulo (USP), movido por desafios técnicos e pela paixão de transformar ideias em software,
-            sempre buscando aprender e inovar. Aqui está um pouco do meu portfólio e habilidades.
+            {t('home.introParagraph')}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 slide-up">
             <Button size="lg" className="hero-gradient glow-effect" asChild>
               <Link to="/projects">
-                Ver Projetos
+                {t('home.viewProjectsButton')}
                 <ArrowRight className="ml-2" size={20} />
               </Link>
             </Button>
             <Button size="lg" variant="outline" className="hover:bg-secondary" asChild>
               <Link to="/resume">
-                Baixar CV
+                {t('home.downloadCVButton')}
               </Link>
             </Button>
           </div>
 
             <div className="flex justify-center gap-6 slide-up">
-            <Button
-              variant="ghost"
-              size="sm"
-              className="hover:text-primary"
-              asChild
-            >
-              <a
-              href="https://github.com/AdhemarMolon"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              >
-              <Github size={20} />
+            <Button variant="ghost" size="sm" className="hover:text-primary" asChild>
+              <a href="https://github.com/AdhemarMolon" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <Github size={20} />
               </a>
             </Button>
-            <Button
-              variant="ghost"
-              size="sm"
-              className="hover:text-primary"
-              asChild
-            >
-              <a
-              href="https://www.linkedin.com/in/adhemar-molon-neto-6b5647268/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              >
-              <Linkedin size={20} />
+            <Button variant="ghost" size="sm" className="hover:text-primary" asChild>
+              <a href="https://www.linkedin.com/in/adhemar-molon-neto-6b5647268/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <Linkedin size={20} />
               </a>
             </Button>
-            <Button
-              variant="ghost"
-              size="sm"
-              className="hover:text-primary"
-              asChild
-            >
-              <a
-              href="mailto:adhemarmolon@usp.br"
-              aria-label="Email"
-              >
-              <Mail size={20} />
+            <Button variant="ghost" size="sm" className="hover:text-primary" asChild>
+              <a href="mailto:adhemarmolon@usp.br" aria-label="Email">
+                <Mail size={20} />
               </a>
             </Button>
             </div>
@@ -148,7 +122,8 @@ const Home = () => {
       <section className="py-20 px-4 bg-muted/30">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-3xl font-bold text-center mb-12 fade-in">
-            Minhas <span className="text-primary">Áreas de Foco</span>
+            {t('home.focusAreasTitlePart1')}{' '}
+            <span className="text-primary">{t('home.focusAreasTitlePart2')}</span>
           </h3>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -156,7 +131,7 @@ const Home = () => {
               const IconComponent = skill.icon;
               return (
                 <Card 
-                  key={skill.title} 
+                  key={skill.key} 
                   className={`card-elegant interactive-card fade-in`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
@@ -164,8 +139,9 @@ const Home = () => {
                     <div className={`w-16 h-16 mx-auto mb-6 rounded-xl bg-gradient-to-br ${skill.color} flex items-center justify-center`}>
                       <IconComponent size={32} className="text-primary" />
                     </div>
-                    <h4 className="text-xl font-bold mb-3">{skill.title}</h4>
-                    <p className="text-muted-foreground">{skill.description}</p>
+                    {/* 4. Buscando título e descrição com base na chave */}
+                    <h4 className="text-xl font-bold mb-3">{t(`home.skills.${skill.key}.title`)}</h4>
+                    <p className="text-muted-foreground">{t(`home.skills.${skill.key}.description`)}</p>
                   </CardContent>
                 </Card>
               );
@@ -177,15 +153,15 @@ const Home = () => {
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-3xl font-bold mb-8 fade-in">
-            Sobre <span className="text-primary">Mim</span>
+            {t('home.aboutMeTitlePart1')}{' '}
+            <span className="text-primary">{t('home.aboutMeTitlePart2')}</span>
           </h3>
           <p className="text-lg text-muted-foreground mb-8 slide-up">
-            Curioso por natureza, com um espírito inquieto para criar, testar e melhorar. Minha jornada na 
-            computação na USP é complementada pela disciplina da academia, sempre buscando o próximo desafio.
+            {t('home.aboutMeParagraph')}
           </p>
           <Button variant="outline" size="lg" asChild className="slide-up">
             <Link to="/extras">
-              Saiba Mais
+              {t('home.learnMoreButton')}
               <ArrowRight className="ml-2" size={20} />
             </Link>
           </Button>

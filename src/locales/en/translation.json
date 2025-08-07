@@ -1,0 +1,230 @@
+{
+  "home": {
+    "profileAlt": "Adhemar's Picture",
+    "greetingPart1": "Hello, I'm",
+    "jobTitle": "Computer Scientist",
+    "introParagraph": "A student at the University of São Paulo (USP), driven by technical challenges and a passion for turning ideas into software, always seeking to learn and innovate. Here is a bit of my portfolio and skills.",
+    "viewProjectsButton": "View Projects",
+    "downloadCVButton": "Download CV",
+    "focusAreasTitlePart1": "My",
+    "focusAreasTitlePart2": "Focus Areas",
+    "skills": {
+      "softwareEngineering": {
+        "title": "Software Engineering",
+        "description": "Design, architecture, testing, and methodologies (with a focus on Agile) to build robust and scalable solutions."
+      },
+      "algorithms": {
+        "title": "Development and Algorithms",
+        "description": "Focus on data structures, complexity, and continuous problem-solving related to competitive programming."
+      },
+      "webDev": {
+        "title": "Web Development",
+        "description": "Interest in web technologies, modern frameworks, full-stack development, and API implementation."
+      }
+    },
+    "aboutMeTitlePart1": "About",
+    "aboutMeTitlePart2": "Me",
+    "aboutMeParagraph": "Curious by nature, with a restless spirit to create, test, and improve. My journey in computer science at USP is complemented by the discipline of the gym, always seeking the next challenge.",
+    "learnMoreButton": "Learn More"
+  },
+  "nav": {
+    "home": "Home",
+    "resume": "Resume",
+    "projects": "Projects",
+    "extras": "Extras"
+  },
+
+"extrasPage": {
+  "header": {
+    "titlePart1": "A Little",
+    "titlePart2": "More",
+    "subtitle": "Beyond the code: my interests, certifications, and how to get in touch with me."
+  },
+  "hobbies": {
+    "titlePart1": "My",
+    "titlePart2": "Interests",
+    "gym": {
+      "title": "Gym",
+      "description": "I practice weight training regularly, focusing on strength and physical well-being."
+    },
+    "leetcode": {
+      "title": "LeetCode",
+      "description": "I solve LeetCode exercises to improve my skills in algorithms and programming logic."
+    },
+    "soccer": {
+      "title": "Soccer",
+      "description": "I enjoy playing and watching soccer, following championships and matches whenever possible."
+    }
+  },
+  "certifications": {
+    "titlePart1": "Certifications",
+    "titlePart2": " & Courses",
+    "csDegree": {
+      "title": "Bachelor's in Computer Science",
+      "provider": "University of São Paulo (USP)",
+      "date": "2024 - present"
+    },
+    "logisticsDegree": {
+      "title": "Technician in Logistics",
+      "provider": "Federal Institute of São Paulo (IFSP)",
+      "date": "2022"
+    },
+    "completed": "Completed",
+    "inProgress": "In Progress"
+  },
+  "contact": {
+    "titlePart1": "Get in",
+    "titlePart2": "Touch",
+    "location": "São Carlos, SP - Brazil"
+  },
+  "hackathons": {
+    "title": "Featured Hackathons",
+    "riot": {
+      "badge": "3rd Place",
+      "title": "Hackathon Riot Games & b1ld",
+      "description": "Achieved <b>3rd place</b> by developing, with my team, an <b>AI Discord bot</b> to engage gaming communities. The solution used <b>Gemini</b> for natural language processing and integration with <b>ChallengerMode APIs</b> for tournament management."
+    },
+    "receitaFederal": {
+      "badge": "Awarded",
+      "title": "1st Federal Revenue Hackathon",
+      "description": "Received an award at a large-scale event with <b>+2,000 participants</b> and about <b>400 registered projects</b>, distributed across <b>6 hubs in Brazil</b>. Our project focused on <b>sustainability</b> and <b>social impact</b>, proposing innovative solutions to real challenges of the Federal Revenue."
+    }
+  },
+  "footer": {
+    "titlePart1": "Let's Build Something",
+    "titlePart2": "Amazing",
+    "titlePart3": " Together!",
+    "subtitle": "I am always open to new challenges and collaboration opportunities."
+  }
+},
+
+"projectsPage": {
+  "header": {
+    "titlePart1": "My",
+    "titlePart2": "Projects",
+    "subtitle": "A carefully selected collection of my work and personal projects. Each project represents a challenge overcome and a valuable opportunity for learning and growth."
+  },
+  "search": {
+    "placeholder": "Search projects, technologies..."
+  },
+  "filters": {
+    "all": "All",
+    "web": "Web",
+    "bot": "Bot",
+    "systems": "Systems",
+    "openSource": "Open Source"
+  },
+  "projects": {
+    "portfolio": {
+      "title": "Personal Portfolio",
+      "description": "Personal website developed with React, TypeScript, and Tailwind CSS. It includes animations, responsive design, and SEO optimization. Features a light/dark theme system and optimized performance."
+    },
+    "databaseC": {
+      "title": "Database in C",
+      "description": "A database management system implemented in pure C, focused on binary file manipulation. The project demonstrates advanced concepts of data structures, efficient memory allocation, and performance-optimized CRUD operations."
+    },
+    "discordBot": {
+      "title": "Discord Bot with Gemini AI",
+      "description": "A Discord bot that uses the Gemini API to generate and display custom messages. This project served as a basis for a solution developed at a USP hackathon, organized by Riot Games, where the team reached the podium."
+    },
+    "biblioLinks": {
+      "title": "BiblioLinks | PUSP-SC Link Aggregator",
+      "description": "An open-source alternative to Linktree, created to centralize important links for the Library of the USP São Carlos Campus. The project was developed with fundamental web technologies, focusing on simplicity and customization."
+    },
+    "carStore": {
+      "title": "Car Store",
+      "description": "An academic project of a virtual car store with customer and administrator profiles. Fullstack with authentication, car CRUD, and a shopping cart. Developed with React, Node.js, and MongoDB."
+    },
+    "beaba": {
+      "title": "CS Basics (Contribution)",
+      "description": "Contribution to an open-source educational project that teaches the fundamentals of computer science. The work involved creating content on 'Circuits for Arithmetic Operations', explaining concepts of combinational logic."
+    }
+  },
+  "noResults": {
+    "title": "No projects found",
+    "description": "We couldn't find any projects matching your search criteria. Try adjusting the filters or search terms.",
+    "clearButton": "Clear Filters"
+  },
+  "cta": {
+    "title": "Liked what you saw?",
+    "description": "These are just a few of my projects. I'm always working on something new and interesting. How about we discuss a possible collaboration?",
+    "githubButton": "See More on GitHub",
+    "extrasButton": "Extras"
+  }
+},
+
+"resumePage": {
+  "header": {
+    "titlePart1": "My",
+    "titlePart2": "Resume",
+    "subtitle": "My journey, projects, and skills in the world of development.",
+    "downloadButton": "Download CV (PDF)"
+  },
+  "personalInfo": {
+    "title": "Personal Information",
+    "name": "Name",
+    "age": "Age",
+    "years": "years",
+    "location": "Location",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "uspIntern": {
+      "role": "Development Intern",
+      "company": "IAU Library - USP São Carlos",
+      "period": "2024 - Present",
+      "task1": "Maintenance and updates of the institutional WordPress site, focusing on usability and information architecture.",
+      "task2": "Development of internal web applications with React, TypeScript, and Tailwind CSS to improve user experience.",
+      "task3": "Quantitative analysis of digital performance metrics to extract patterns and support decision-making."
+    }
+  },
+  "projects": {
+    "title": "Technical Projects",
+    "carStore": {
+      "title": "Classic Car Store - Full Stack Project",
+      "description": "A complete web application simulating a vehicle store, with registration, display, and sales. The front-end was built with React, Vite, and Tailwind CSS, and the back-end with Node.js and MongoDB to manage inventory and authentication.",
+      "tags": ["React", "Node.js", "MongoDB", "Tailwind CSS", "Full Stack"]
+    },
+    "discordBot": {
+      "title": "AI Discord Bot (Hackathon)",
+      "description": "A Discord bot that interacts with users using the Gemini API. The team placed on the podium in the SEMCOMP/USP competition.",
+      "tags": ["Python", "Gemini API", "WebSockets", "Artificial Intelligence"]
+    },
+    "orcid": {
+      "title": "ORCID Project - Software Engineering",
+      "description": "A web application for organizing and visualizing academic data, based on requirements from USP professors and using the public ORCID API.",
+      "tags": ["Software Engineering", "API REST", "React", "Prototyping"]
+    }
+  },
+  "education": {
+    "title": "Academic Background",
+    "csDegree": {
+      "degree": "Bachelor of Science in Computer Science",
+      "institution": "University of São Paulo (USP) - São Carlos",
+      "period": "2023 - Present",
+      "description": "Focus on web development, machine learning, computer vision, and software engineering."
+    },
+    "logisticsDegree": {
+      "degree": "Technician in Logistics",
+      "institution": "Federal Institute of São Paulo (IFSP)",
+      "period": "2020 - 2022",
+      "description": "Completed technical course."
+    }
+  },
+  "skills": {
+    "titlePart1": "Technical",
+    "titlePart2": "Skills",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "concepts": "Concepts & Methodologies",
+    "tools": "Tools"
+  },
+  "footer": {
+    "cta": "Liked what you saw? Let's build something amazing together!",
+    "downloadButton": "Download CV (PDF)"
+  }
+}
+}

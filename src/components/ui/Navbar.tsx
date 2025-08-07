@@ -1,17 +1,26 @@
+// src/components/Navbar.tsx (MODIFICADO)
+
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Home, User, FolderOpen, Star } from 'lucide-react';
 
+// 1. Importe o hook de tradução e o novo componente
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from '@/components/LanguageSwitcher'; // Certifique-se que o caminho está correto
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  // 2. Inicialize o hook
+  const { t } = useTranslation();
 
+  // 3. Altere o array de navegação para usar chaves de tradução
   const navigation = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'Currículo', href: '/resume', icon: User },
-    { name: 'Projetos', href: '/projects', icon: FolderOpen },
-    { name: 'Extras', href: '/extras', icon: Star },
+    { key: 'nav.home', href: '/', icon: Home },
+    { key: 'nav.resume', href: '/resume', icon: User },
+    { key: 'nav.projects', href: '/projects', icon: FolderOpen },
+    { key: 'nav.extras', href: '/extras', icon: Star },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -29,12 +38,12 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-2">
             {navigation.map((item) => {
               const IconComponent = item.icon;
               return (
                 <Link
-                  key={item.name}
+                  key={item.key}
                   to={item.href}
                   className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-300 hover:bg-secondary/50 ${
                     isActive(item.href)
@@ -43,10 +52,15 @@ const Navbar = () => {
                   }`}
                 >
                   <IconComponent size={18} />
-                  <span className="font-medium">{item.name}</span>
+                  {/* 4. Use a função t() para traduzir o nome do link */}
+                  <span className="font-medium">{t(item.key)}</span>
                 </Link>
               );
             })}
+            {/* 5. Adicione o seletor de idioma na versão desktop */}
+            <div className="pl-4">
+              <LanguageSwitcher />
+            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -70,7 +84,7 @@ const Navbar = () => {
                 const IconComponent = item.icon;
                 return (
                   <Link
-                    key={item.name}
+                    key={item.key}
                     to={item.href}
                     onClick={() => setIsOpen(false)}
                     className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-300 ${
@@ -80,10 +94,14 @@ const Navbar = () => {
                     }`}
                   >
                     <IconComponent size={20} />
-                    <span className="font-medium">{item.name}</span>
+                    <span className="font-medium">{t(item.key)}</span>
                   </Link>
                 );
               })}
+               {/* 6. Adicione o seletor de idioma na versão mobile */}
+              <div className="flex justify-center pt-4 pb-2">
+                <LanguageSwitcher />
+              </div>
             </div>
           </div>
         )}
