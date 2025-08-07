@@ -1,90 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <!-- Configurações básicas da página -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adhemar Molon</title>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>adhemar-bytes-dev</title>
+  </head>
 
-    <!-- Importação do CSS externo -->
-    <link rel="stylesheet" href="StyleIndex.css"> 
-
-    <!-- Fonte estilo retrô (Press Start 2P) -->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
-    <!-- Ícones (substitua YOUR_KIT_CODE pelo código da sua conta no FontAwesome, se for usar) -->
-    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    
-    <!-- ===== BARRA FIXA NO TOPO DA PÁGINA ===== -->
-    <div class="BarraHorizontal">
-        <div class="ConteudoBarra">
-
-            <!-- Foto de perfil -->
-            <div class="FotoDoPai">
-                <img src="Eu.jpeg" alt="MinhaFoto">
-            </div>
-
-            <!-- Nome no topo -->
-            <h3>Adhemar Molon</h3>
-
-            <!-- Ícones das redes sociais -->
-            <div class="social-container">
-                <a href="https://www.instagram.com/adhemarmolon" class="social-button" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-                </a>
-                <a href="https://www.linkedin.com/in/adhemar-molon-neto-6b5647268" class="social-button" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn">
-                </a>
-                <a href="mailto:adhemarmolon@usp.br" class="social-button">
-                    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="E-mail">
-                </a>
-                <a href="https://github.com/AdhemarMolon" class="social-button" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png" alt="GitHub">
-                </a>
-                <a href="https://wa.me/+5511910232912" class="social-button" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-                </a>
-            </div>
-
-            <!-- Links para outras páginas -->
-            <div class="Hiperlinks">
-                <a id="Curriculo" href="Curriculo.html">Curriculo</a>
-                <a id="Projetos" href="Projetos.html">Projetos</a>
-                <a id="Hackathon" href="Hackathon.html">Hackathon</a>
-            </div>
-        </div>
-    </div>
-
-
-        <!-- ===== Relogio ===== -->
-
-        <div id="clock-container"></div>
-
-    <!-- ===== BLOCO QUE GIRA ===== -->
-
-            <!-- From Uiverse.io by bociKond --> 
-            <div class="spinner">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-
-
-
-    <!-- ===== IMAGEM DE FUNDO ===== -->
-
-        <img id="FUNDO" src="ChatGPTImage.png" alt="Fundo de tela">
-
-
-    <!--Parte de texto -->
-
-
-    <!-- ===== JAVASCRIPT EXTERNO ===== -->
-    <script src="ScriptIndex.js"></script>
-</body>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

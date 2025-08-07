@@ -1,0 +1,239 @@
+import { useState } from 'react';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { Search, Filter, Github, ExternalLink, Code2, TrendingUp } from 'lucide-react';
+import ProjectCard from '@/components/ProjectCard';
+
+const Projects = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedFilter, setSelectedFilter] = useState('all');
+
+  // Dados dos projetos com mais informações
+  const projects = [
+    {
+      id: 1,
+      title: "Portfolio Pessoal",
+      description: "Site pessoal desenvolvido com React, TypeScript e Tailwind CSS. Inclui animações, design responsivo e otimização para SEO. Sistema de temas claro/escuro e performance otimizada.",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Vite", "Framer Motion"],
+      githubUrl: "https://github.com/AdhemarMolon/portfolio",
+      category: "web",
+      lastUpdated: "2025-09"
+    },
+    {
+      id: 2,
+      title: "Banco de Dados em C",
+      description: "Sistema de gerenciamento de banco de dados implementado em C puro, focado na manipulação de arquivos binários. O projeto demonstra conceitos avançados de estruturas de dados, alocação eficiente de memória e operações CRUD otimizadas para performance.",
+      technologies: ["C", "Estruturas de Dados", "Manipulação de Arquivos", "Algoritmos"],
+      githubUrl: "https://github.com/AdhemarMolon/Banco-de-Dados-em-C",
+      category: "Sistemas de Baixo Nível",
+      lastUpdated: "2024-08"
+    },
+    {
+      "id": 3,
+      "title": "Bot de Discord com IA Gemini",
+      "description": "Bot para Discord que utiliza a API do Gemini para gerar e exibir mensagens customizadas. Este projeto serviu como base para uma solução desenvolvida em um hackathon da USP, organizado pela Riot Games, onde a equipe alcançou o pódio.",
+      "technologies": ["Node.js", "Discord.js", "Gemini API"],
+      "githubUrl": "https://github.com/CorvusAI-ICMC/discord-bot-lesson/tree/Branch_with_API",
+      "liveUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7255928128705884161/",
+      "category": "bot",
+      "lastUpdated": "2024-10"
+    },
+    {
+      "id": 4,
+      "title": "BiblioLinks | Agregador de Links da PUSP-SC",
+      "description": "Alternativa de código aberto ao Linktree, criada para centralizar os links importantes da Biblioteca da Prefeitura do Campus da USP de São Carlos. Projeto desenvolvido com tecnologias web fundamentais, focado em simplicidade e customização.",
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "githubUrl": "https://github.com/AdhemarMolon/linktr.ee-vers-o-eu",
+      "liveUrl": "https://bibliotecapusp-sc.github.io/linktr.ee-vers-o-eu/",
+      "category": "web",
+      "lastUpdated": "2024-06"
+    },
+    {
+        "id": 5,
+        "title": "Loja de Carros",
+        "description": "Projeto acadêmico de uma loja de carros virtual com perfis de cliente e administrador. Fullstack com autenticação, CRUD de carros e carrinho de compras. Desenvolvido com React, Node.js e MongoDB.",
+        "githubUrl": "https://github.com/AdhemarMolon/Loja-de-Carros",
+        "liveUrl": null,
+        "category": "web",
+        "lastUpdated": "2025-08",
+        "technologies": ["React", "Node.js", "MongoDB","Tailwind CSS"]
+    },
+    {
+        "id": 6,
+        "title": "Bê-á-bá da Computação (Contribuição)",
+        "description": "Contribuição para um projeto open-source educacional que ensina os fundamentos da ciência da computação. O trabalho envolveu a criação do conteúdo sobre 'Circuitos para Operações Aritméticas', explicando conceitos de lógica combinacional.",
+        "technologies": ["GitHub Pages"],
+        "githubUrl": "https://github.com/AdhemarMolon/be-a-ba?tab=readme-ov-file",
+        "liveUrl": "https://de-abreu.github.io/be-a-ba/docs/logica-combinacional/circuitos-para-operacoes-aritmeticas",
+        "category": "open-source",
+        "lastUpdated": "2024-07"
+    }
+  ];
+
+  const filters = [
+    { id: 'all', label: 'Todos', count: projects.length },
+    { id: 'web', label: 'Web', count: projects.filter(p => p.category === 'web').length },
+    { id: 'bot', label: 'Bot', count: projects.filter(p => p.category === 'bot').length },
+    { id: 'Sistemas de Baixo Nível', label: 'Sistemas', count: projects.filter(p => p.category === 'Sistemas de Baixo Nível').length },
+  ];
+
+  // Filtrar projetos
+  const filteredProjects = projects.filter(project => {
+    const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         project.technologies.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()));
+    
+    const matchesFilter = selectedFilter === 'all' || project.category === selectedFilter;
+    
+    return matchesSearch && matchesFilter;
+  });
+
+
+
+  return (
+    <div className="min-h-screen bg-background pt-24 pb-12 px-4">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12 fade-in">
+          <h1 className="text-4xl font-bold mb-4">
+            Meus <span className="text-primary">Projetos</span>
+          </h1>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
+            Uma coleção cuidadosamente selecionada dos meus trabalhos e projetos pessoais. 
+            Cada projeto representa um desafio superado e uma oportunidade valiosa de aprendizado e crescimento.
+          </p>
+        </div>
+
+
+
+        {/* Search and Filter */}
+        <div className="mb-8 space-y-4 slide-up">
+          <div className="max-w-md mx-auto">
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground" size={20} />
+              <Input
+                type="text"
+                placeholder="Pesquisar projetos, tecnologias..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="pl-10 py-3 bg-card/50 backdrop-blur-sm border-border/50 focus:border-primary transition-all duration-300"
+              />
+            </div>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-2">
+            {filters.map((filter) => (
+              <Button
+                key={filter.id}
+                variant={selectedFilter === filter.id ? "default" : "outline"}
+                size="sm"
+                onClick={() => setSelectedFilter(filter.id)}
+                className={`transition-all duration-300 ${
+                  selectedFilter === filter.id 
+                    ? 'bg-primary text-primary-foreground shadow-lg scale-105' 
+                    : 'hover:bg-secondary/80 hover:scale-105'
+                }`}
+              >
+                <Filter size={14} className="mr-1.5" />
+                {filter.label} ({filter.count})
+              </Button>
+            ))}
+          </div>
+        </div>
+
+        {/* Projects Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 slide-up">
+          {filteredProjects.map((project, index) => (
+            <div
+              key={project.id}
+              className="fade-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <ProjectCard
+                title={project.title}
+                description={project.description}
+                technologies={project.technologies}
+                githubUrl={project.githubUrl}
+                liveUrl={project.liveUrl}
+                category={project.category}
+                featured={project.featured}
+                stars={project.stars}
+                forks={project.forks}
+                lastUpdated={project.lastUpdated}
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* No Results */}
+        {filteredProjects.length === 0 && (
+          <div className="text-center py-16 slide-up">
+            <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-muted/50 flex items-center justify-center">
+              <Search className="text-muted-foreground" size={28} />
+            </div>
+            <h3 className="text-xl font-semibold mb-2 text-foreground">Nenhum projeto encontrado</h3>
+            <p className="text-muted-foreground mb-6 max-w-md mx-auto">
+              Não encontramos projetos que correspondam aos seus critérios de busca. 
+              Tente ajustar os filtros ou termos de pesquisa.
+            </p>
+            <Button 
+              variant="outline" 
+              onClick={() => {
+                setSearchTerm('');
+                setSelectedFilter('all');
+              }}
+              className="transition-all duration-300 hover:scale-105"
+            >
+              <Filter size={16} className="mr-2" />
+              Limpar Filtros
+            </Button>
+          </div>
+        )}
+
+        {/* Call to Action */}
+        <div className="text-center mt-16 slide-up">
+          <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8 border border-border/50">
+            <Code2 className="w-12 h-12 mx-auto mb-4 text-primary" />
+            <h3 className="text-2xl font-bold mb-4">Gostou do que viu?</h3>
+            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+              Estes são apenas alguns dos meus projetos. Estou sempre trabalhando em algo novo e interessante. 
+              Que tal conversarmos sobre uma possível colaboração?
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Button
+                asChild
+                size="lg"
+                className="transition-all duration-300 hover:scale-105"
+                >
+                <a
+                  href="https://github.com/AdhemarMolon"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Github className="mr-2" size={18} />
+                  Ver Mais no GitHub
+                </a>
+                </Button>
+                <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="transition-all duration-300 hover:scale-105"
+                >
+                <a
+                  href="/extras"
+                  rel="noopener noreferrer"
+                >
+                  <ExternalLink className="mr-2" size={18} />
+                  Extras
+                </a>
+                </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Projects;
