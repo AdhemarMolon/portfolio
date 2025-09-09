@@ -193,12 +193,6 @@ const Projects = () => {
                   {t('projectsPage.cta.githubButton')}
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="transition-all duration-300 hover:scale-105">
-                <a href="/extras" rel="noopener noreferrer">
-                  <ExternalLink className="mr-2" size={18} />
-                  {t('projectsPage.cta.extrasButton')}
-                </a>
-              </Button>
             </div>
           </div>
         </div>
