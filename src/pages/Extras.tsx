@@ -59,7 +59,12 @@ const Extras = () => {
     {
       key: "receitaFederal",
       badgeKey: "awarded"
+    },
+    {
+      key: "Raia",
+      badgeKey: "participant"
     }
+
   ];
 
   return (

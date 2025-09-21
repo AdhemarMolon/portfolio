@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Search, Filter, Github, ExternalLink, Code2 } from 'lucide-react'; 
+import { Search, Filter, Github, Code2 } from 'lucide-react'; 
 import ProjectCard from '@/components/ProjectCard';
 
 // 1. Importar o hook de tradução
@@ -75,6 +75,16 @@ const Projects = () => {
       liveUrl: "https://de-abreu.github.io/be-a-ba/docs/logica-combinacional/circuitos-para-operacoes-aritmeticas",
       category: "open-source",
       lastUpdated: "2024-07"
+    },
+    {
+      id: 7,
+      titleKey: "FakeChecker.title",
+      descriptionKey: "FakeChecker.description",
+      technologies: ["JavaScript", "OpenAI API", "Extensão de Navegador"],
+      githubUrl: "https://github.com/AdhemarMolon/VerificadorDeFakeNews",
+      liveUrl: null,
+      category: "open-source",
+      lastUpdated: "2024-10"
     }
   ];
 

@@ -88,6 +88,11 @@
       "badge": "Premiado",
       "title": "1er Hackathon de la Receita Federal",
       "description": "Recibí un premio en un evento a gran escala con <b>+2,000 participantes</b> y cerca de <b>400 proyectos</b> inscritos, distribuidos en <b>6 sedes en Brasil</b>. Nuestro proyecto se centró en la <b>sostenibilidad</b> y el <b>impacto social</b>, proponiendo soluciones innovadoras para los desafíos reales de la Receita Federal."
+    },
+    "Raia": {
+      "badge": "Participante",
+      "title": "Hackathon Raia",
+      "description": "Desarrollamos el Fake Checker, una extensión de navegador que identifica fake news en tiempo real. La solución utilizó IA de OpenAI para análisis de contenido e integración con fuentes periodísticas confiables, ofreciendo al usuario una evaluación clara sobre la veracidad de la información."
     }
   },
   "footer": {
@@ -138,6 +143,10 @@
     "beaba": {
       "title": "ABC de la Computación (Contribución)",
       "description": "Contribución a un proyecto educativo de código abierto que enseña los fundamentos de la informática. El trabajo consistió en crear contenido sobre 'Circuitos para Operaciones Aritméticas', explicando conceptos de lógica combinacional."
+    },
+    "FakeChecker": {
+      "title": "Fake Checker (Hackathon Raia)",
+      "description": "Extensión de navegador que identifica fake news en tiempo real. Utiliza IA de OpenAI para análisis de contenido e integración con fuentes periodísticas confiables, ofreciendo al usuario una evaluación clara sobre la veracidad de la información."
     }
   },
   "noResults": {
