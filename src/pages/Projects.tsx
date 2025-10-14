@@ -20,6 +20,17 @@ const Projects = () => {
   const projectsData = [
     {
       id: 1,
+      titleKey: "meuVestibulinho.title",
+      descriptionKey: "meuVestibulinho.description",
+      technologies: ["Next.js", "TypeScript", "tRPC", "Prisma", "PostgreSQL", "Tailwind CSS", "NextAuth", "Zod"],
+      githubUrl: "https://www.meuvestibulinho.com.br/",
+      liveUrl: "https://www.meuvestibulinho.com.br/",
+      category: "fullstack",
+      lastUpdated: "2025-10",
+      featured: true
+    },
+    {
+      id: 2,
       titleKey: "portfolio.title",
       descriptionKey: "portfolio.description",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Vite", "Framer Motion"],
@@ -28,7 +39,7 @@ const Projects = () => {
       lastUpdated: "2025-09"
     },
     {
-      id: 2,
+      id: 3,
       titleKey: "databaseC.title",
       descriptionKey: "databaseC.description",
       technologies: ["C", "Estruturas de Dados", "Manipulação de Arquivos", "Algoritmos"],
@@ -37,7 +48,7 @@ const Projects = () => {
       lastUpdated: "2024-08"
     },
     {
-      id: 3,
+      id: 4,
       titleKey: "discordBot.title",
       descriptionKey: "discordBot.description",
       technologies: ["Node.js", "Discord.js", "Gemini API"],
@@ -47,7 +58,7 @@ const Projects = () => {
       lastUpdated: "2024-10"
     },
     {
-      id: 4,
+      id: 5,
       titleKey: "biblioLinks.title",
       descriptionKey: "biblioLinks.description",
       technologies: ["HTML", "CSS", "JavaScript"],
@@ -57,7 +68,7 @@ const Projects = () => {
       lastUpdated: "2024-06"
     },
     {
-      id: 5,
+      id: 6,
       titleKey: "carStore.title",
       descriptionKey: "carStore.description",
       technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
@@ -67,7 +78,7 @@ const Projects = () => {
       lastUpdated: "2025-08"
     },
     {
-      id: 6,
+      id: 7,
       titleKey: "beaba.title",
       descriptionKey: "beaba.description",
       technologies: ["GitHub Pages"],
@@ -77,7 +88,7 @@ const Projects = () => {
       lastUpdated: "2024-07"
     },
     {
-      id: 7,
+      id: 8,
       titleKey: "FakeChecker.title",
       descriptionKey: "FakeChecker.description",
       technologies: ["JavaScript", "OpenAI API", "Extensão de Navegador"],
@@ -145,7 +156,11 @@ const Projects = () => {
                 variant={selectedFilter === filter.id ? "default" : "outline"}
                 size="sm"
                 onClick={() => setSelectedFilter(filter.id)}
-                className={`transition-all duration-300 ${ selectedFilter === filter.id ? 'bg-primary text-primary-foreground shadow-lg scale-105' : 'hover:bg-secondary/80 hover:scale-105' }`}
+                className={`transition-all duration-300 font-medium ${ 
+                  selectedFilter === filter.id 
+                    ? 'bg-gradient-to-r from-primary to-primary/80 text-primary-foreground shadow-lg shadow-primary/30 scale-105 border-0' 
+                    : 'hover:bg-secondary/80 hover:scale-105 hover:shadow-md' 
+                }`}
               >
                 <Filter size={14} className="mr-1.5" />
                 {t(`projectsPage.filters.${filter.labelKey}`)} ({filter.count})

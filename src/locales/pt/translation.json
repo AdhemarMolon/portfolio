@@ -122,6 +122,10 @@
     "openSource": "Open Source"
   },
   "projects": {
+    "meuVestibulinho": {
+      "title": "MeuVestibulinho - Plataforma de Preparação para ETEC",
+      "description": "Plataforma fullstack completa para preparação ao vestibulinho da ETEC e IFSP. Desenvolvida por ex-alunos de escolas técnicas, oferece trilhas de estudo personalizadas, simulados oficiais, questão diária, sistema de streaks, dashboard de progresso e mini cursos. Conta com autenticação, banco de dados robusto e sistema de amigos para estudo colaborativo. 100% gratuita e acessível."
+    },
     "portfolio": {
       "title": "Portfolio Pessoal",
       "description": "Site pessoal desenvolvido com React, TypeScript e Tailwind CSS. Inclui animações, design responsivo e otimização para SEO. Sistema de temas claro/escuro e performance otimizada."
@@ -193,21 +197,21 @@
     }
   },
   "projects": {
-    "title": "Projetos Técnicos",
-    "carStore": {
-      "title": "Loja de Carros Clássicos - Projeto Full Stack",
-      "description": "Aplicação web completa simulando uma loja de veículos, com cadastro, exibição e venda. O front-end foi feito em React com Vite e Tailwind CSS, e o back-end com Node.js e MongoDB para gerenciar estoque e autenticação.",
-      "tags": ["React", "Node.js", "MongoDB", "Tailwind CSS", "Full Stack"]
+    "title": "Projetos em Destaque",
+    "meuVestibulinho": {
+      "title": "MeuVestibulinho - Plataforma Educacional Fullstack",
+      "description": "Plataforma completa para preparação ao vestibulinho da ETEC com mais de 1000 usuários ativos. Sistema robusto com trilhas de estudo, simulados, questão diária, gamificação com streaks e dashboard analítico. Arquitetura moderna com Next.js 14, tRPC para type-safety, Prisma ORM e PostgreSQL em produção.",
+      "tags": ["Next.js", "TypeScript", "tRPC", "Prisma", "PostgreSQL", "NextAuth", "Tailwind CSS"]
     },
     "discordBot": {
-      "title": "Bot com IA para Discord (Hackathon)",
-      "description": "Bot para Discord que interage com usuários usando a API do Gemini. A equipe ficou no pódio da competição da SEMCOMP/USP.",
-      "tags": ["Python", "Gemini API", "WebSockets", "Inteligência Artificial"]
+      "title": "Bot com IA Gemini para Discord - Hackathon USP",
+      "description": "Bot desenvolvido para Discord usando a API Gemini para interações inteligentes. Projeto vencedor (pódio) no Hackathon da SEMCOMP/USP organizado pela Riot Games. Demonstra integração com APIs de IA, WebSockets e desenvolvimento de bots com funcionalidades avançadas.",
+      "tags": ["Node.js", "Discord.js", "Gemini API", "WebSockets", "IA"]
     },
-    "orcid": {
-      "title": "Projeto ORCID - Engenharia de Software",
-      "description": "Aplicação web para organização e visualização de dados acadêmicos, baseada em requisitos de docentes da USP e utilizando a API pública do ORCID.",
-      "tags": ["Engenharia de Software", "API REST", "React", "Prototipação"]
+    "databaseC": {
+      "title": "Sistema de Banco de Dados em C Puro",
+      "description": "Implementação completa de um SGBD em C, demonstrando domínio em estruturas de dados avançadas, manipulação de arquivos binários, alocação eficiente de memória e operações CRUD otimizadas. Projeto focado em performance e gestão manual de recursos.",
+      "tags": ["C", "Estruturas de Dados", "Arquivos Binários", "Algoritmos", "Gerenciamento de Memória"]
     }
   },
   "education": {
