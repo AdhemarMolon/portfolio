@@ -1,0 +1,252 @@
+{
+  "home": {
+    "profileAlt": "Foto de Adhemar",
+    "greetingPart1": "Hola, soy",
+    "jobTitle": "Científico de la Computación",
+    "introParagraph": "Estudiante de Ciencias de la Computación en la USP con experiencia práctica en desarrollo Full Stack. Fundador de plataforma educativa con +1.700 usuarios y premiado en hackathons nacionales. Disponible para prácticas remotas o híbridas.",
+    "englishLevel": "Inglés Intermedio (mejorando)",
+    "viewProjectsButton": "Ver Proyectos",
+    "downloadCVButton": "Descargar CV",
+    "focusAreasTitlePart1": "Mis",
+    "focusAreasTitlePart2": "Áreas de Enfoque",
+    "skills": {
+      "softwareEngineering": {
+        "title": "Ingeniería de Software",
+        "description": "Diseño, arquitectura, pruebas y metodologías (con enfoque en Agile) para construir soluciones robustas y escalables."
+      },
+      "algorithms": {
+        "title": "Desarrollo y Algoritmos",
+        "description": "Enfoque en estructuras de datos, complejidad y la constante resolución de problemas relacionados con la programación competitiva."
+      },
+      "webDev": {
+        "title": "Desarrollo Web",
+        "description": "Interés en tecnologías web, frameworks modernos, desarrollo full-stack e implementación de APIs."
+      }
+    },
+    "aboutMeTitlePart1": "Sobre",
+    "aboutMeTitlePart2": "Mí",
+    "aboutMeParagraph": "Curioso por naturaleza, con un espíritu inquieto para crear, probar y mejorar. Mi trayectoria en ciencias de la computación en la USP se complementa con la disciplina del gimnasio, siempre buscando el próximo desafío.",
+    "learnMoreButton": "Saber Más"
+  },
+  "nav": {
+    "home": "Inicio",
+    "resume": "Currículum",
+    "projects": "Proyectos",
+    "extras": "Extras"
+  },
+
+"extrasPage": {
+  "header": {
+    "titlePart1": "Un Poco",
+    "titlePart2": "Más",
+    "subtitle": "Más allá del código: mis intereses, certificaciones y cómo ponerte en contacto conmigo."
+  },
+  "hobbies": {
+    "titlePart1": "Mis",
+    "titlePart2": "Intereses",
+    "gym": {
+      "title": "Gimnasio",
+      "description": "Practico musculación regularmente, centrándome en la fuerza y el bienestar físico."
+    },
+    "leetcode": {
+      "title": "LeetCode",
+      "description": "Resuelvo ejercicios de LeetCode para mejorar mis habilidades en algoritmos y lógica de programación. ¡Mira mis videos resolviendo problemas!",
+      "link": "https://drive.google.com/drive/folders/18ssN9WFkBgK51ES9hN8DnNVOhZ4lLw3n?usp=sharing",
+      "linkText": "Ver Videos"
+    },
+    "soccer": {
+      "title": "Fútbol",
+      "description": "Me gusta jugar y ver fútbol, siguiendo campeonatos y partidos siempre que es posible."
+    }
+  },
+  "certifications": {
+    "titlePart1": "Certificaciones",
+    "titlePart2": " y Cursos",
+    "csDegree": {
+      "title": "Grado en Ciencias de la Computación",
+      "provider": "Universidad de São Paulo (USP)",
+      "date": "2024 - presente"
+    },
+    "logisticsDegree": {
+      "title": "Técnico en Logística",
+      "provider": "Instituto Federal de São Paulo (IFSP)",
+      "date": "2022"
+    },
+    "completed": "Completado",
+    "inProgress": "En Progreso"
+  },
+  "contact": {
+    "titlePart1": "Ponte en",
+    "titlePart2": "Contacto",
+    "location": "São Carlos, SP - Brasil"
+  },
+  "hackathons": {
+    "title": "Hackathons Destacados",
+    "riot": {
+      "badge": "3er Lugar",
+      "title": "Hackathon Riot Games & b1ld",
+      "description": "<b>Lideré un equipo de 3 personas</b> y logramos el <b>3er lugar</b> desarrollando un <b>bot de Discord con IA</b> para involucrar a las comunidades de gaming. La solución utilizó <b>Gemini</b> para el procesamiento del lenguaje natural e integración con <b>APIs de ChallengerMode</b> para la gestión de torneos."
+    },
+    "receitaFederal": {
+      "badge": "Premiado",
+      "title": "1er Hackathon de la Receita Federal",
+      "description": "Recibí un premio en un evento a gran escala con <b>+2,000 participantes</b> y cerca de <b>400 proyectos</b> inscritos, distribuidos en <b>6 sedes en Brasil</b>. Nuestro proyecto se centró en la <b>sostenibilidad</b> y el <b>impacto social</b>, proponiendo soluciones innovadoras para los desafíos reales de la Receita Federal."
+    },
+    "Raia": {
+      "badge": "Participante",
+      "title": "Hackathon Raia",
+      "description": "Desarrollamos el Fake Checker, una extensión de navegador que identifica fake news en tiempo real. La solución utilizó IA de OpenAI para análisis de contenido e integración con fuentes periodísticas confiables, ofreciendo al usuario una evaluación clara sobre la veracidad de la información."
+    }
+  },
+  "footer": {
+    "titlePart1": "¡Construyamos Algo",
+    "titlePart2": "Increíble",
+    "titlePart3": " Juntos!",
+    "subtitle": "Siempre estoy abierto a nuevos desafíos y oportunidades de colaboración."
+  }
+},
+
+"projectsPage": {
+  "header": {
+    "titlePart1": "Mis",
+    "titlePart2": "Proyectos",
+    "subtitle": "Una colección cuidadosamente seleccionada de mis trabajos y proyectos personales. Cada proyecto representa un desafío superado y una valiosa oportunidad de aprendizaje y crecimiento."
+  },
+  "search": {
+    "placeholder": "Buscar proyectos, tecnologías..."
+  },
+  "filters": {
+    "all": "Todos",
+    "fullstack": "Full Stack",
+    "datascience": "Data Science",
+    "web": "Web",
+    "bot": "Bot",
+    "systems": "Sistemas",
+    "openSource": "Open Source"
+  },
+  "projects": {
+    "dataMiningSocialStudy": {
+      "title": "Minería de Datos: Infraestructura Escolar vs ENEM",
+      "description": "Proyecto de Data Science aplicando metodología KDD para investigar la correlación entre la infraestructura física de las escuelas brasileñas y el rendimiento en el ENEM. Segmentación de +25 mil escuelas con K-Means, validación con Método del Codo y explicación de reglas con Árbol de Decisión. Hallazgos: la paradoja de la infraestructura pública y la brecha entre educación pública y privada."
+    },
+    "meuVestibulinho": {
+      "title": "MeuVestibulinho - Plataforma Educativa (Fundador)",
+      "description": "Plataforma Full Stack que fundé y desarrollé desde cero, actualmente con +1.700 usuarios activos. Arquitectura moderna con Next.js 14, tRPC, Prisma y PostgreSQL. Features: rutas personalizadas, simulacros, gamificación con rachas, panel analítico y sistema de amigos. Deploy en producción con Vercel. Responsable del 100% de la implementación técnica."
+    },
+    "portfolio": {
+      "title": "Portafolio Personal",
+      "description": "Sitio web personal desarrollado con React, TypeScript y Tailwind CSS. Incluye animaciones, diseño responsivo y optimización para SEO. Sistema de temas claro/oscuro y rendimiento optimizado."
+    },
+    "databaseC": {
+      "title": "Base de Datos en C",
+      "description": "Un sistema de gestión de bases de datos implementado en C puro, centrado en la manipulación de archivos binarios. El proyecto demuestra conceptos avanzados de estructuras de datos, asignación eficiente de memoria y operaciones CRUD optimizadas para el rendimiento."
+    },
+    "discordBot": {
+      "title": "Bot de Discord con IA Gemini",
+      "description": "Un bot para Discord que utiliza la API de Gemini para generar y mostrar mensajes personalizados. Este proyecto sirvió de base para una solución desarrollada en un hackathon de la USP, organizado por Riot Games, donde el equipo alcanzó el podio."
+    },
+    "biblioLinks": {
+      "title": "BiblioLinks | Agregador de Enlaces de PUSP-SC",
+      "description": "Una alternativa de código abierto a Linktree, creada para centralizar enlaces importantes de la Biblioteca del Campus de la USP en São Carlos. El proyecto fue desarrollado con tecnologías web fundamentales, enfocado en la simplicidad y la personalización."
+    },
+    "carStore": {
+      "title": "Tienda de Coches",
+      "description": "Proyecto académico de una tienda de coches virtual con perfiles de cliente y administrador. Fullstack con autenticación, CRUD de coches y un carrito de compras. Desarrollado con React, Node.js y MongoDB."
+    },
+    "beaba": {
+      "title": "ABC de la Computación (Contribución)",
+      "description": "Contribución a un proyecto educativo de código abierto que enseña los fundamentos de la informática. El trabajo consistió en crear contenido sobre 'Circuitos para Operaciones Aritméticas', explicando conceptos de lógica combinacional."
+    },
+    "FakeChecker": {
+      "title": "Fake Checker (Hackathon Raia)",
+      "description": "Extensión de navegador que identifica fake news en tiempo real. Utiliza IA de OpenAI para análisis de contenido e integración con fuentes periodísticas confiables, ofreciendo al usuario una evaluación clara sobre la veracidad de la información."
+    }
+  },
+  "noResults": {
+    "title": "No se encontraron proyectos",
+    "description": "No pudimos encontrar ningún proyecto que coincida con tus criterios de búsqueda. Intenta ajustar los filtros o los términos de búsqueda.",
+    "clearButton": "Limpiar Filtros"
+  },
+  "cta": {
+    "title": "¿Te gustó lo que viste?",
+    "description": "Estos son solo algunos de mis proyectos. Siempre estoy trabajando en algo nuevo e interesante. ¿Qué tal si hablamos de una posible colaboración?",
+    "githubButton": "Ver Más en GitHub",
+    "extrasButton": "Extras"
+  }
+},
+
+"resumePage": {
+  "header": {
+    "titlePart1": "Mi",
+    "titlePart2": "Currículum",
+    "subtitle": "Mi trayectoria, proyectos y competencias en el mundo del desarrollo.",
+    "downloadButton": "Descargar CV (PDF)"
+  },
+  "personalInfo": {
+    "title": "Información Personal",
+    "name": "Nombre",
+    "age": "Edad",
+    "years": "años",
+    "location": "Ubicación",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "experience": {
+    "title": "Experiencia Profesional",
+    "uspIntern": {
+      "role": "Pasante de Desarrollo",
+      "company": "Biblioteca del IAU - USP São Carlos",
+      "period": "2024 - Presente",
+      "task1": "Mantenimiento y actualización del sitio institucional en WordPress, con enfoque en usabilidad y arquitectura de la información.",
+      "task2": "Desarrollo de aplicaciones web internas con React, TypeScript y Tailwind CSS para mejorar la experiencia del usuario.",
+      "task3": "Análisis cuantitativo de métricas de rendimiento digital para extraer patrones y apoyar la toma de decisiones."
+    }
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "meuVestibulinho": {
+      "title": "MeuVestibulinho - Fundador & Desarrollador Principal",
+      "description": "Plataforma educativa que fundé y desarrollé integralmente, escalando a +1.700 usuarios activos. Métricas: miles de preguntas respondidas, cientos de simulacros realizados, alta tasa de retención. Stack: Next.js 14, tRPC, Prisma ORM, PostgreSQL. Deploy en producción vía Vercel con CI/CD automatizado.",
+      "tags": ["Next.js", "TypeScript", "tRPC", "Prisma", "PostgreSQL", "NextAuth", "Tailwind CSS", "Vercel"]
+    },
+    "discordBot": {
+      "title": "Bot con IA Gemini - 3er Lugar Hackathon Riot Games",
+      "description": "Lideré un equipo de 3 personas en el Hackathon SEMCOMP/USP organizado por Riot Games, alcanzando el podio. Bot de Discord con IA Gemini para engagement de comunidades gaming. Integración con APIs ChallengerMode para gestión de torneos.",
+      "tags": ["Node.js", "Discord.js", "Gemini API", "WebSockets", "IA", "Liderazgo"]
+    },
+    "databaseC": {
+      "title": "Sistema de Base de Datos en C Puro",
+      "description": "Implementación completa de un SGBD en C, demostrando dominio de estructuras de datos avanzadas, manipulación de archivos binarios, asignación eficiente de memoria y operaciones CRUD optimizadas. Proyecto enfocado en rendimiento y gestión manual de recursos.",
+      "tags": ["C", "Estructuras de Datos", "Archivos Binarios", "Algoritmos", "Gestión de Memoria"]
+    }
+  },
+  "education": {
+    "title": "Formación Académica",
+    "csDegree": {
+      "degree": "Grado en Ciencias de la Computación",
+      "institution": "Universidad de São Paulo (USP) - São Carlos",
+      "period": "2023 - Presente",
+      "description": "Enfoque en desarrollo web, aprendizaje automático, visión por computadora e ingeniería de software."
+    },
+    "logisticsDegree": {
+      "degree": "Técnico en Logística",
+      "institution": "Instituto Federal de São Paulo (IFSP)",
+      "period": "2020 - 2022",
+      "description": "Curso técnico completo."
+    }
+  },
+  "skills": {
+    "titlePart1": "Habilidades",
+    "titlePart2": "Técnicas",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "concepts": "Conceptos y Metodologías",
+    "tools": "Herramientas"
+  },
+  "footer": {
+    "cta": "¿Te gustó lo que viste? ¡Construyamos algo increíble juntos!",
+    "downloadButton": "Descargar CV (PDF)"
+  }
+}
+}
