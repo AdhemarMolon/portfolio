@@ -42,6 +42,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       bot: "bg-gradient-to-r from-indigo-500/20 to-violet-500/20 text-indigo-300 border border-indigo-400/40 shadow-sm shadow-indigo-500/20",
       low_level: "bg-gradient-to-r from-slate-500/20 to-gray-600/20 text-slate-300 border border-slate-400/40 shadow-sm shadow-slate-500/20",
       "open-source": "bg-gradient-to-r from-amber-500/20 to-yellow-500/20 text-amber-300 border border-amber-400/40 shadow-sm shadow-amber-500/20",
+      datascience: "bg-gradient-to-r from-purple-500/20 to-pink-500/20 text-purple-300 border border-purple-400/40 shadow-sm shadow-purple-500/20",
       "Sistemas de Baixo Nível": "bg-gradient-to-r from-red-500/20 to-rose-500/20 text-red-300 border border-red-400/40 shadow-sm shadow-red-500/20"
     };
     return colors[cat || ''] || "bg-gradient-to-r from-gray-500/20 to-slate-500/20 text-gray-300 border border-gray-400/40";
@@ -90,13 +91,22 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       PostgreSQL: "bg-gradient-to-r from-blue-700/20 to-blue-800/20 text-blue-200 border-blue-500/40",
       NextAuth: "bg-gradient-to-r from-purple-600/20 to-pink-600/20 text-purple-200 border-purple-400/40",
       Zod: "bg-gradient-to-r from-blue-500/20 to-indigo-600/20 text-blue-200 border-blue-400/40",
+      Pandas: "bg-gradient-to-r from-blue-500/20 to-indigo-500/20 text-blue-200 border-blue-400/40",
+      "Scikit-learn": "bg-gradient-to-r from-orange-500/20 to-amber-500/20 text-orange-200 border-orange-400/40",
+      "K-Means": "bg-gradient-to-r from-teal-500/20 to-cyan-500/20 text-teal-200 border-teal-400/40",
+      "Decision Tree": "bg-gradient-to-r from-green-500/20 to-emerald-500/20 text-green-200 border-green-400/40",
+      Matplotlib: "bg-gradient-to-r from-blue-600/20 to-sky-500/20 text-blue-200 border-blue-400/40",
+      Seaborn: "bg-gradient-to-r from-cyan-500/20 to-teal-500/20 text-cyan-200 border-cyan-400/40",
     };
     return techColors[tech] || "bg-gradient-to-r from-gray-500/20 to-slate-500/20 text-gray-200 border-gray-400/40";
   };
 
   const formatDate = (dateString?: string) => {
     if (!dateString) return null;
-    return new Date(dateString).toLocaleDateString('pt-BR', { month: 'short', year: 'numeric' });
+    // Adiciona o dia 15 para evitar problemas de timezone que causam o mês aparecer incorreto
+    const [year, month] = dateString.split('-');
+    const date = new Date(parseInt(year), parseInt(month) - 1, 15);
+    return date.toLocaleDateString('pt-BR', { month: 'short', year: 'numeric' });
   };
 
   const handleGithubClick = () => {

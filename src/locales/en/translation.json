@@ -3,7 +3,8 @@
     "profileAlt": "Adhemar's Picture",
     "greetingPart1": "Hello, I'm",
     "jobTitle": "Computer Scientist",
-    "introParagraph": "A student at the University of São Paulo (USP), driven by technical challenges and a passion for turning ideas into software, always seeking to learn and innovate. Here is a bit of my portfolio and skills.",
+    "introParagraph": "Computer Science student at USP with hands-on Full Stack development experience. Founder of an educational platform with 1,700+ users and award-winner at national hackathons. Available for remote or hybrid internships.",
+    "englishLevel": "Intermediate English (improving)",
     "viewProjectsButton": "View Projects",
     "downloadCVButton": "Download CV",
     "focusAreasTitlePart1": "My",
@@ -49,7 +50,9 @@
     },
     "leetcode": {
       "title": "LeetCode",
-      "description": "I solve LeetCode exercises to improve my skills in algorithms and programming logic."
+      "description": "I solve LeetCode exercises to improve my algorithms and programming logic skills. Check out my problem-solving videos!",
+      "link": "https://drive.google.com/drive/folders/18ssN9WFkBgK51ES9hN8DnNVOhZ4lLw3n?usp=sharing",
+      "linkText": "Watch Videos"
     },
     "soccer": {
       "title": "Soccer",
@@ -82,7 +85,7 @@
     "riot": {
       "badge": "3rd Place",
       "title": "Hackathon Riot Games & b1ld",
-      "description": "Achieved <b>3rd place</b> by developing, with my team, an <b>AI Discord bot</b> to engage gaming communities. The solution used <b>Gemini</b> for natural language processing and integration with <b>ChallengerMode APIs</b> for tournament management."
+      "description": "<b>Led a team of 3</b> and achieved <b>3rd place</b> by developing an <b>AI Discord bot</b> to engage gaming communities. The solution used <b>Gemini</b> for natural language processing and integration with <b>ChallengerMode APIs</b> for tournament management."
     },
     "receitaFederal": {
       "badge": "Awarded",
@@ -114,15 +117,21 @@
   },
   "filters": {
     "all": "All",
+    "fullstack": "Full Stack",
+    "datascience": "Data Science",
     "web": "Web",
     "bot": "Bot",
     "systems": "Systems",
     "openSource": "Open Source"
   },
   "projects": {
+    "dataMiningSocialStudy": {
+      "title": "Data Mining: School Infrastructure vs ENEM",
+      "description": "Data Science project applying KDD methodology to investigate the correlation between Brazilian schools' physical infrastructure and ENEM performance. Segmentation of 25k+ schools using K-Means, validation with Elbow Method, and rule extraction with Decision Trees. Key findings: the public infrastructure paradox and the public-private education gap."
+    },
     "meuVestibulinho": {
-      "title": "MeuVestibulinho - ETEC Preparation Platform",
-      "description": "Complete fullstack platform for ETEC and IFSP entrance exam preparation. Developed by technical school alumni, it offers personalized study paths, official practice tests, daily challenges, streak system, progress dashboard, and mini courses. Features authentication, robust database, and a friends system for collaborative studying. 100% free and accessible."
+      "title": "MeuVestibulinho - Educational Platform (Founder)",
+      "description": "Full Stack platform I founded and built from scratch, now with 1,700+ active users. Modern architecture with Next.js 14, tRPC, Prisma, and PostgreSQL. Features: personalized study paths, practice tests, gamification with streaks, analytics dashboard, and social features. Production deploy on Vercel. Responsible for 100% of technical implementation."
     },
     "portfolio": {
       "title": "Personal Portfolio",
@@ -197,14 +206,14 @@
   "projects": {
     "title": "Featured Projects",
     "meuVestibulinho": {
-      "title": "MeuVestibulinho - Educational Fullstack Platform",
-      "description": "Complete platform for ETEC entrance exam preparation with over 1000 active users. Robust system featuring study paths, practice tests, daily challenges, gamification with streaks, and analytical dashboard. Modern architecture with Next.js 14, tRPC for type-safety, Prisma ORM, and PostgreSQL in production.",
-      "tags": ["Next.js", "TypeScript", "tRPC", "Prisma", "PostgreSQL", "NextAuth", "Tailwind CSS"]
+      "title": "MeuVestibulinho - Founder & Lead Developer",
+      "description": "Educational platform I founded and fully developed, scaling to 1,700+ active users. Metrics: thousands of questions answered, hundreds of practice tests completed, high retention rate. Stack: Next.js 14, tRPC, Prisma ORM, PostgreSQL. Production deploy via Vercel with automated CI/CD.",
+      "tags": ["Next.js", "TypeScript", "tRPC", "Prisma", "PostgreSQL", "NextAuth", "Tailwind CSS", "Vercel"]
     },
     "discordBot": {
-      "title": "Discord Bot with Gemini AI - USP Hackathon",
-      "description": "Discord bot developed using the Gemini API for intelligent interactions. Winner project (podium) at SEMCOMP/USP Hackathon organized by Riot Games. Demonstrates AI API integration, WebSockets, and advanced bot development features.",
-      "tags": ["Node.js", "Discord.js", "Gemini API", "WebSockets", "AI"]
+      "title": "Gemini AI Bot - 3rd Place Riot Games Hackathon",
+      "description": "Led a team of 3 at SEMCOMP/USP Hackathon organized by Riot Games, reaching the podium. Discord bot with Gemini AI for gaming community engagement. Integration with ChallengerMode APIs for tournament management.",
+      "tags": ["Node.js", "Discord.js", "Gemini API", "WebSockets", "AI", "Leadership"]
     },
     "databaseC": {
       "title": "Database System in Pure C",

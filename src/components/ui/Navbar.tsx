@@ -7,7 +7,8 @@ import { Menu, X, Home, User, FolderOpen, Star } from 'lucide-react';
 
 // 1. Importe o hook de tradução e o novo componente
 import { useTranslation } from 'react-i18next';
-import LanguageSwitcher from '@/components/LanguageSwitcher'; // Certifique-se que o caminho está correto
+import LanguageSwitcher from '@/components/LanguageSwitcher';
+import ThemeToggle from '@/components/ThemeToggle';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,8 +55,9 @@ const Navbar = () => {
                 </Link>
               );
             })}
-            {/* 5. Adicione o seletor de idioma na versão desktop */}
-            <div className="pl-4">
+            {/* 5. Adicione o seletor de idioma e tema na versão desktop */}
+            <div className="pl-4 flex items-center gap-2">
+              <ThemeToggle />
               <LanguageSwitcher />
             </div>
           </div>
@@ -95,8 +97,9 @@ const Navbar = () => {
                   </Link>
                 );
               })}
-               {/* 6. Adicione o seletor de idioma na versão mobile */}
-              <div className="flex justify-center pt-4 pb-2">
+               {/* 6. Adicione o seletor de idioma e tema na versão mobile */}
+              <div className="flex justify-center items-center gap-4 pt-4 pb-2">
+                <ThemeToggle />
                 <LanguageSwitcher />
               </div>
             </div>

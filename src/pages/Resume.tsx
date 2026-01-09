@@ -30,9 +30,9 @@ const Resume = () => {
 
   const skills = {
     frontend: ["React", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Next.js"],
-    backend: ["Node.js", "Python", "Java", "C/C++", "Express.js", "PostgreSQL", "MongoDB", "NoSQL"],
-    concepts: ["POO", "Estruturas de Dados", "Arquitetura de Software", "Testes de Software", "Metodologias Ágeis", "Análise de Complexidade"],
-    tools: ["Git", "GitHub", "VS Code", "Figma", "Linux", "LaTeX"]
+    backend: ["Node.js", "Python", "Java", "C/C++", "Express.js", "PostgreSQL", "MongoDB", "tRPC", "Prisma"],
+    concepts: ["POO", "Estruturas de Dados", "Arquitetura de Software", "Kanban", "Metodologias Ágeis", "Análise de Complexidade"],
+    tools: ["Git", "GitHub", "Docker", "Vercel", "VS Code", "Figma", "Linux"]
   };
 
   return (
@@ -58,10 +58,7 @@ const Resume = () => {
         {/* Personal Info */}
         <Card className="card-elegant mb-8 slide-up">
           <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <div className="w-8 h-8 hero-gradient rounded-lg flex items-center justify-center">
-                <span className="text-sm font-bold text-primary-foreground">A</span>
-              </div>
+            <CardTitle>
               {t('resumePage.personalInfo.title')}
             </CardTitle>
           </CardHeader>

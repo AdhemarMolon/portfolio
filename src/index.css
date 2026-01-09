@@ -3,8 +3,72 @@
 /* Portfolio Design System - Modern, Professional & Interactive */
 
 @layer base {
+  /* Light Theme - Default */
   :root {
-    /* Modern Portfolio Color Palette */
+    /* Modern Portfolio Color Palette - Light */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 10%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 240 10% 10%;
+
+    --popover: 0 0% 98%;
+    --popover-foreground: 240 10% 10%;
+
+    --primary: 236 93% 54%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 236 93% 64%;
+
+    --secondary: 240 5% 92%;
+    --secondary-foreground: 240 10% 10%;
+
+    --muted: 240 5% 94%;
+    --muted-foreground: 240 5% 45%;
+
+    --accent: 270 95% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 5% 87%;
+    --input: 240 5% 87%;
+    --ring: 236 93% 54%;
+
+    --radius: 0.75rem;
+
+    /* Custom Portfolio Colors */
+    --hero-gradient: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --glow-primary: 236 93% 54%;
+    --glow-accent: 270 95% 65%;
+    
+    /* Enhanced Shadows - Light */
+    --shadow-elegant: 0 20px 40px -12px hsl(var(--primary) / 0.15);
+    --shadow-glow: 0 0 60px hsl(var(--glow-primary) / 0.15);
+    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.08);
+    --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.05);
+    --shadow-medium: 0 8px 30px hsl(0 0% 0% / 0.08);
+    --shadow-strong: 0 16px 50px hsl(0 0% 0% / 0.12);
+
+    /* Smooth Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-fast: all 0.2s ease-out;
+    --transition-slow: all 0.8s ease-in-out;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Dark Theme */
+  .dark {
     --background: 240 10% 4%;
     --foreground: 240 10% 96%;
 
@@ -34,14 +98,7 @@
     --input: 240 8% 15%;
     --ring: 236 93% 64%;
 
-    --radius: 0.75rem;
-
-    /* Custom Portfolio Colors */
-    --hero-gradient: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
-    --glow-primary: 236 93% 64%;
-    --glow-accent: 270 95% 75%;
-    
-    /* Enhanced Shadows */
+    /* Enhanced Shadows - Dark */
     --shadow-elegant: 0 20px 40px -12px hsl(var(--primary) / 0.25);
     --shadow-glow: 0 0 60px hsl(var(--glow-primary) / 0.3);
     --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.4);
@@ -49,43 +106,6 @@
     --shadow-medium: 0 8px 30px hsl(0 0% 0% / 0.15);
     --shadow-strong: 0 16px 50px hsl(0 0% 0% / 0.25);
 
-    /* Smooth Transitions */
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    --transition-fast: all 0.2s ease-out;
-    --transition-slow: all 0.8s ease-in-out;
-
-    /* Sidebar (for future use) */
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;

@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Search, Filter, Github, Code2 } from 'lucide-react'; 
+import { Search, Github, Code2 } from 'lucide-react'; 
 import ProjectCard from '@/components/ProjectCard';
 
 // 1. Importar o hook de tradução
@@ -14,7 +14,6 @@ const Projects = () => {
   const { t } = useTranslation();
   
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedFilter, setSelectedFilter] = useState('all');
 
   // 3. Os dados dos projetos agora usam chaves de tradução
   const projectsData = [
@@ -31,6 +30,17 @@ const Projects = () => {
     },
     {
       id: 2,
+      titleKey: "dataMiningSocialStudy.title",
+      descriptionKey: "dataMiningSocialStudy.description",
+      technologies: ["Python", "Pandas", "Scikit-learn", "K-Means", "Decision Tree", "Matplotlib", "Seaborn"],
+      githubUrl: "https://colab.research.google.com/drive/1O4FR0ELAICmz6zZul-MoZijEVyhlBvbD?usp=sharing",
+      liveUrl: "https://colab.research.google.com/drive/1O4FR0ELAICmz6zZul-MoZijEVyhlBvbD?usp=sharing",
+      category: "datascience",
+      lastUpdated: "2025-09",
+      featured: true
+    },
+    {
+      id: 3,
       titleKey: "portfolio.title",
       descriptionKey: "portfolio.description",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Vite", "Framer Motion"],
@@ -39,7 +49,7 @@ const Projects = () => {
       lastUpdated: "2025-09"
     },
     {
-      id: 3,
+      id: 4,
       titleKey: "databaseC.title",
       descriptionKey: "databaseC.description",
       technologies: ["C", "Estruturas de Dados", "Manipulação de Arquivos", "Algoritmos"],
@@ -48,7 +58,7 @@ const Projects = () => {
       lastUpdated: "2024-08"
     },
     {
-      id: 4,
+      id: 5,
       titleKey: "discordBot.title",
       descriptionKey: "discordBot.description",
       technologies: ["Node.js", "Discord.js", "Gemini API"],
@@ -58,7 +68,7 @@ const Projects = () => {
       lastUpdated: "2024-10"
     },
     {
-      id: 5,
+      id: 6,
       titleKey: "biblioLinks.title",
       descriptionKey: "biblioLinks.description",
       technologies: ["HTML", "CSS", "JavaScript"],
@@ -68,17 +78,17 @@ const Projects = () => {
       lastUpdated: "2024-06"
     },
     {
-      id: 6,
+      id: 7,
       titleKey: "carStore.title",
       descriptionKey: "carStore.description",
       technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
       githubUrl: "https://github.com/AdhemarMolon/Loja-de-Carros",
       liveUrl: null,
-      category: "web",
+      category: "fullstack",
       lastUpdated: "2025-08"
     },
     {
-      id: 7,
+      id: 8,
       titleKey: "beaba.title",
       descriptionKey: "beaba.description",
       technologies: ["GitHub Pages"],
@@ -88,7 +98,7 @@ const Projects = () => {
       lastUpdated: "2024-07"
     },
     {
-      id: 8,
+      id: 9,
       titleKey: "FakeChecker.title",
       descriptionKey: "FakeChecker.description",
       technologies: ["JavaScript", "OpenAI API", "Extensão de Navegador"],
@@ -99,14 +109,6 @@ const Projects = () => {
     }
   ];
 
-  const filters = [
-    { id: 'all', labelKey: 'all', count: projectsData.length },
-    { id: 'web', labelKey: 'web', count: projectsData.filter(p => p.category === 'web').length },
-    { id: 'bot', labelKey: 'bot', count: projectsData.filter(p => p.category === 'bot').length },
-    { id: 'low_level', labelKey: 'systems', count: projectsData.filter(p => p.category === 'low_level').length },
-    { id: 'open-source', labelKey: 'openSource', count: projectsData.filter(p => p.category === 'open-source').length }
-  ];
-
   const filteredProjects = projectsData.filter(project => {
     const title = t(`projectsPage.projects.${project.titleKey}`);
     const description = t(`projectsPage.projects.${project.descriptionKey}`);
@@ -115,9 +117,7 @@ const Projects = () => {
                          description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          project.technologies.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()));
     
-    const matchesFilter = selectedFilter === 'all' || project.category === selectedFilter;
-    
-    return matchesSearch && matchesFilter;
+    return matchesSearch;
   });
 
   return (
@@ -134,8 +134,8 @@ const Projects = () => {
           </p>
         </div>
 
-        {/* Search and Filter */}
-        <div className="mb-8 space-y-4 slide-up">
+        {/* Search */}
+        <div className="mb-8 slide-up">
           <div className="max-w-md mx-auto">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground" size={20} />
@@ -147,25 +147,6 @@ const Projects = () => {
                 className="pl-10 py-3 bg-card/50 backdrop-blur-sm border-border/50 focus:border-primary transition-all duration-300"
               />
             </div>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-2">
-            {filters.map((filter) => (
-              <Button
-                key={filter.id}
-                variant={selectedFilter === filter.id ? "default" : "outline"}
-                size="sm"
-                onClick={() => setSelectedFilter(filter.id)}
-                className={`transition-all duration-300 font-medium ${ 
-                  selectedFilter === filter.id 
-                    ? 'bg-gradient-to-r from-primary to-primary/80 text-primary-foreground shadow-lg shadow-primary/30 scale-105 border-0' 
-                    : 'hover:bg-secondary/80 hover:scale-105 hover:shadow-md' 
-                }`}
-              >
-                <Filter size={14} className="mr-1.5" />
-                {t(`projectsPage.filters.${filter.labelKey}`)} ({filter.count})
-              </Button>
-            ))}
           </div>
         </div>
 
@@ -196,10 +177,10 @@ const Projects = () => {
             <p className="text-muted-foreground mb-6 max-w-md mx-auto">{t('projectsPage.noResults.description')}</p>
             <Button 
               variant="outline" 
-              onClick={() => { setSearchTerm(''); setSelectedFilter('all'); }}
+              onClick={() => { setSearchTerm(''); }}
               className="transition-all duration-300 hover:scale-105"
             >
-              <Filter size={16} className="mr-2" />
+              <Search size={16} className="mr-2" />
               {t('projectsPage.noResults.clearButton')}
             </Button>
           </div>

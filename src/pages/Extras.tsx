@@ -3,6 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
+import { Button } from '@/components/ui/button';
 import { 
   Mail, 
   Phone, 
@@ -11,7 +12,8 @@ import {
   Trophy,
   CheckCircle,
   Clock,
-  Tv
+  Tv,
+  ExternalLink
 } from 'lucide-react';
 
 // 1. Importar o hook de tradução
@@ -26,17 +28,20 @@ const Extras = () => {
     {
       icon: Dumbbell,
       key: "gym",
-      color: "from-red-500/20 to-orange-500/20"
+      color: "from-red-500/20 to-orange-500/20",
+      link: null
     },
     {
       icon: Trophy,
       key: "leetcode",
-      color: "from-yellow-500/20 to-amber-500/20"
+      color: "from-yellow-500/20 to-amber-500/20",
+      link: "https://drive.google.com/drive/folders/18ssN9WFkBgK51ES9hN8DnNVOhZ4lLw3n?usp=sharing"
     },
     {
       icon: Tv, 
       key: "soccer",
-      color: "from-blue-500/20 to-cyan-500/20"
+      color: "from-blue-500/20 to-cyan-500/20",
+      link: null
     }
   ];
 
@@ -100,9 +105,17 @@ const Extras = () => {
                           <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${hobby.color} flex items-center justify-center flex-shrink-0`}>
                             <IconComponent size={24} className="text-primary" />
                           </div>
-                          <div>
+                          <div className="flex-1">
                             <h3 className="text-lg font-semibold mb-2">{t(`extrasPage.hobbies.${hobby.key}.title`)}</h3>
                             <p className="text-muted-foreground">{t(`extrasPage.hobbies.${hobby.key}.description`)}</p>
+                            {hobby.link && (
+                              <Button variant="outline" size="sm" asChild className="mt-3 transition-all duration-300 hover:scale-105">
+                                <a href={hobby.link} target="_blank" rel="noopener noreferrer">
+                                  <ExternalLink size={14} className="mr-2" />
+                                  {t(`extrasPage.hobbies.${hobby.key}.linkText`) || 'Ver vídeos'}
+                                </a>
+                              </Button>
+                            )}
                           </div>
                         </div>
                       </CardContent>
